@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcs225.a CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o CMakeFiles/cs225.dir/cs225/PNG.cpp.o
+/usr/bin/ranlib libcs225.a

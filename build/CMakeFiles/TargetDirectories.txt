@@ -1,0 +1,12 @@
+/workspaces/CS225/release-f22/mp_mosaics/build/CMakeFiles/test.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/CMakeFiles/mosaics.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/CMakeFiles/edit_cache.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/CMakeFiles/rebuild_cache.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/lib/CMakeFiles/lodepng.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/lib/CMakeFiles/util.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/lib/CMakeFiles/cs225.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/lib/CMakeFiles/edit_cache.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/lib/CMakeFiles/rebuild_cache.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/src/CMakeFiles/src.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/src/CMakeFiles/edit_cache.dir
+/workspaces/CS225/release-f22/mp_mosaics/build/src/CMakeFiles/rebuild_cache.dir
