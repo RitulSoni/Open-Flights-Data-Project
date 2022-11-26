@@ -1,23 +1,9 @@
-#include "Image.h"
-#include "StickerSheet.h"
+#include "Airport.h"
 
 int main() {
-  //
-  // Reminder:
-  //   Before exiting main, save your creation to disk as myImage.png
-  //
+  std::cout << "hello world" << std::endl;
+  getairports("airports.dat");
 
-  Image alma;
-  alma.readFromFile("../tests/alma.png");
-  Image i;
-  i.readFromFile("../tests/i.png");
-
-  StickerSheet sheet(alma, 3);
-  sheet.addSticker(i, 500, 500);
-  sheet.addSticker(i, 200, 500);
-  sheet.addSticker(i, 500, 300);
-
-  sheet.render().writeToFile("../myImage.png");
-
+  std::vector<Airport> vect = get_airports;
   return 0;
 }
