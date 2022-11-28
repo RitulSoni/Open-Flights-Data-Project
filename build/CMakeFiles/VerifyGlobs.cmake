@@ -64,9 +64,6 @@ endif()
 # tests_src at CMakeLists.txt:136 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/workspaces/CS225/release-f22/CS225-Final-Project/tests/*.cpp")
 set(OLD_GLOB
-  "/workspaces/CS225/release-f22/CS225-Final-Project/tests/mazereader.cpp"
-  "/workspaces/CS225/release-f22/CS225-Final-Project/tests/test_part1.cpp"
-  "/workspaces/CS225/release-f22/CS225-Final-Project/tests/test_part2.cpp"
   "/workspaces/CS225/release-f22/CS225-Final-Project/tests/test_student.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

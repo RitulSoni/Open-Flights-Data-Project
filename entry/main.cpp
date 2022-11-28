@@ -8,9 +8,12 @@ int main() {
   t.first = 0.0;
   t.second = 0.0;
   Airport a(0, "test", "test","test", t,"test");
-  //a.getairports("airports.dat");
+  a.getairports("airports.dat");
   
-  //std::vector<Airport> vect = a.get_airports();
+  std::vector<Airport> vect = a.get_airports();
+
+  //std::cout << vect[2].get_AirportCity() << std::endl;
+
   
   return 0;
 }
