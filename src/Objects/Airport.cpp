@@ -8,8 +8,8 @@
 using namespace std;
 
 Airport::Airport() {
-  coord.first = 0;
-  coord.second = 0;
+  coordinates.first = 0;
+  coordinates.second = 0;
 }
 int Airport::get_AirportId() {
   return id;
@@ -62,4 +62,8 @@ void Airport::getairports(const std::string & filename) {
 
 std::vector<Airport> Airport::get_airports() {
   return airports;
+}
+
+void Airport::hello() {
+  std::cout << "hello world2" << std::endl;
 }

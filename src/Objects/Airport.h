@@ -15,6 +15,7 @@ class Airport {
     std::pair<double, double> get_AirportCoordinates();
     void getairports(const std::string & filename);
     std::vector<Airport> get_airports();
+    void hello();
   private: 
     int id;
     std::string name;
