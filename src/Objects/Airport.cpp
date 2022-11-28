@@ -11,6 +11,17 @@ Airport::Airport() {
   coordinates.first = 0;
   coordinates.second = 0;
 }
+
+Airport::Airport(int id1, std::string name1, std::string city1, std::string country1, std::pair<double, double> coordinates1,std::string iata1) {
+  id = id1;
+  name = name1;
+  city = city1;
+  country = country1;
+  coordinates = coordinates1;
+  iata = iata1;
+}
+
+
 int Airport::get_AirportId() {
   return id;
 }
