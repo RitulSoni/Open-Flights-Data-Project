@@ -38,3 +38,23 @@ void Graph::createGraph() {
 unordered_map<int, vector<int>> Graph::getGraph() {
     return adjacencyList;
 }
+
+
+void Graph::EdgeWeights() {
+    Route r;
+    vector<int> starting = r.getSourceVect();
+    vector<int> ending = r.getDestVect();
+
+    for (int i = 0; i < (int) from.size(); i++) {
+        vector<int> temp;
+        temp.push_back(starting[i]);
+        temp.push_back(ending[i]);
+        
+        if (latitudes.find(from[i]) != latitudes.end() && latitudes.find(to[i]) != latitudes.end()) {
+            if (longitudes.find(from[i]) != longitudes.end() && longitudes.find(to[i]) != longitudes.end()) {
+                double weight = calculateDistance(latitudes[from[i]], longitudes[from[i]], latitudes[to[i]], longitudes[to[i]]);
+                edgesLabel.insert(pair<vector<int>, double>(temp, weight));
+            }
+        }
+    }
+}
