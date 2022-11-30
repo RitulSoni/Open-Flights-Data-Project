@@ -15,7 +15,28 @@ using namespace std;
 class Graph
 {
 public:
-  
+    Graph();
+    void createGraph();
+    unordered_map<int, vector<int>> getGraph();
+
+
+private:
+
+    //Adjenaccy list representation of a graph 
+    unordered_map<int, vector<int>> adjacencyList;
+};
+
+
+
+
+
+
+
+
+
+
+
+
     // Graph(bool weighted);
     // //Graph(bool weighted, bool directed);
     // //Graph(bool weighted, int numVertices);
@@ -43,14 +64,3 @@ public:
 
     // unsigned getEdgeWeight(Vertex start, Vertex dest) const;
     // Edge getEdge(Vertex source, Vertex destination) const;
-
-
-
-
-    void createGraph();
-
-private:
-
-    //Adjenaccy list representation of a graph 
-    unordered_map<int, vector<int>> adjacencyList;
-};

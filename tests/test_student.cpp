@@ -37,3 +37,8 @@ TEST_CASE("Test Airports Parsing", "[airport]") {
   REQUIRE(vect[0].get_AirportName() == "\"Goroka Airport\"");
 
 }
+
+
+TEST_CASE("Test Adjancency List", "[GRAPH]") {
+  
+}

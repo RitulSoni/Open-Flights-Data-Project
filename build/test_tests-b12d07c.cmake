@@ -2,4 +2,6 @@ add_test( [==[PUT YOUR TESTS HERE!!!]==] [==[/workspaces/ritulsoni/Developer/CS2
 set_tests_properties( [==[PUT YOUR TESTS HERE!!!]==] PROPERTIES WORKING_DIRECTORY [==[/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build]==])
 add_test( [==[Test Airports Parsing]==] [==[/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/test]==] [==[Test Airports Parsing]==]  )
 set_tests_properties( [==[Test Airports Parsing]==] PROPERTIES WORKING_DIRECTORY [==[/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build]==])
-set( test_TESTS [==[PUT YOUR TESTS HERE!!!]==] [==[Test Airports Parsing]==])
+add_test( [==[Test Adjancency List]==] [==[/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/test]==] [==[Test Adjancency List]==]  )
+set_tests_properties( [==[Test Adjancency List]==] PROPERTIES WORKING_DIRECTORY [==[/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build]==])
+set( test_TESTS [==[PUT YOUR TESTS HERE!!!]==] [==[Test Airports Parsing]==] [==[Test Adjancency List]==])

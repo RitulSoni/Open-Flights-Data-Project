@@ -62,6 +62,24 @@ std::string Route::get_RouteSource() {
 std::string Route::get_RouteDest() {
   return destination_airport;
 }
+
+vector<int> Route::getDestVect() {
+    vector<int> destinations;
+    for (size_t i = 0; i < routes.size(); ++i) {
+      destinations.push_back(stoi(routes[i].get_RouteDest()));
+    }
+    return destinations;
+}
+
+vector<int> Route::getSourceVect() {
+    vector<int> source;
+    for (size_t i = 0; i < routes.size(); ++i) {
+      source.push_back(stoi(routes[i].get_RouteSource()));
+    }
+    return source;
+}
+
+
 int Route::get_RouteAirlineID() {
   return airline_id;
 }
