@@ -15,7 +15,8 @@ class Airport {
     std::pair<double, double> get_AirportCoordinates();
     void getairports(const std::string & filename);
     std::vector<Airport> get_airports();
-    void hello();
+    friend std::ostream& operator<<(std::ostream& os, Airport a);
+    std::string get_AirportIATA();
   private: 
     int id;
     std::string name;

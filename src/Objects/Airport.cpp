@@ -34,15 +34,20 @@ std::string Airport::get_AirportCountry() {
 std::string Airport::get_AirportName() {
   return name;
 }
+std::string Airport::get_AirportIATA() {
+  return iata;
+}
 std::pair<double, double> Airport::get_AirportCoordinates() {
   return coordinates;
 }
 
 void Airport::getairports(const std::string & filename) {
-  std::ifstream file(filename);
-  if (file.is_open()) {
+  ifstream f(filename);
+  //f.open(filename);
+  if (f.is_open()) {
     string line = "";
-    while (getline(file, line)) {
+    while (getline(f, line)) {
+      //std::cout << "line" << std::endl;
       std::string name, city, country, iata;
       double lat, lon;
       int id;
@@ -66,8 +71,12 @@ void Airport::getairports(const std::string & filename) {
 
       coordinates = pair<double, double>(lat, lon);
       Airport air(id, name, city, country, coordinates, iata);
+      //std::cout << "object made" << std::endl;
       airports.push_back(air);
+      //std::cout << "obkect push back" << std::endl;
     }
+  } else {
+    std::cout << "file does not work" << std::endl;
   }
 }
 
@@ -75,6 +84,14 @@ std::vector<Airport> Airport::get_airports() {
   return airports;
 }
 
-void Airport::hello() {
-  std::cout << "hello world2" << std::endl;
+std::ostream& operator<<(std::ostream& os, Airport a) {
+  os << "Airport ID: " << a.get_AirportId() << std::endl;
+  os << "Airport Name: " << a.get_AirportName() << std::endl;
+  os << "Airport City: " << a.get_AirportCity() << std::endl;
+  os << "Airport Country: " << a.get_AirportCountry() << std::endl;
+  std::pair<double, double> coords = a.get_AirportCoordinates();
+  os << "Airport Latitude: " << coords.first << std::endl;
+  os << "Airport Longitude: " << coords.second << std::endl;
+  os << "Airport IATA Code: " << a.get_AirportIATA() << std::endl;
+  return os;
 }
