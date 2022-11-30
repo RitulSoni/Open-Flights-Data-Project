@@ -4,6 +4,7 @@
 
 #include "Objects/Airport.h"
 #include "Objects/Routes.h"
+#include "Objects/Algorithms.h"
 
 using std::cout;
 using std::endl;
@@ -43,4 +44,11 @@ TEST_CASE("Test Adjancency List", "[GRAPH]") {
   
 
   
+}
+
+TEST_CASE("Test BFS", "[BFS]") {
+int airports = 0;
+std::vector<int> a = BFS(1);
+airports = a.size();
+REQUIRE(airports == 14110);
 }

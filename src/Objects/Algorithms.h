@@ -1,6 +1,10 @@
-
+#pragma once
+#include <iostream>
+#include <vector>
+#include <string> 
+#include <map>
 class Algorithms {
 
   public: 
-  bool BFS(int);
+  std::vector<int> BFS(int);
 };

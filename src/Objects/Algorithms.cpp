@@ -1,7 +1,6 @@
 #include "Algorithms.h"
 #include "Airport.h"
 #include "Graph.h"
-#include <queue>
 
 // Returns the order of airports 
 std::vector<int> Algorithms::BFS(int source) {
