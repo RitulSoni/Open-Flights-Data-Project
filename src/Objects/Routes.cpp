@@ -7,8 +7,19 @@
 
 using namespace std;
 
+Route::Route() {}
+
+Route::Route(string airline1, int airline_id1, string source_airport1, string destination_airport1, int num_stops1) {
+  airline = airline1;
+  airline_id = airline_id1;
+  source_airport = source_airport1;
+  destination_airport = destination_airport1;
+  num_stops = num_stops1;
+}
+
+
 void Route::getroutes(const std::string & filename) {
-  std::ifstream file(filename);
+  ifstream file(filename);
   if (file.is_open()) {
     string line = "";
     while (getline(file, line)) {
@@ -41,4 +52,32 @@ void Route::getroutes(const std::string & filename) {
       routes.push_back(rout);
     }
   }
+}
+std::string Route::get_RouteAirline() {
+  return airline;
+}
+std::string Route::get_RouteSource() {
+  return source_airport;
+}
+std::string Route::get_RouteDest() {
+  return destination_airport;
+}
+int Route::get_RouteAirlineID() {
+  return airline_id;
+}
+int Route::get_RouteNumStop() {
+  return num_stops;
+}
+
+std::vector<Route> Route::get_routes() {
+  return routes;
+}
+
+std::ostream& operator<<(std::ostream& os, Route r) {
+  os << "Route Airline: " << r.get_RouteAirline() << std::endl;
+  os << "Airline ID: " << r.get_RouteAirlineID() << std::endl;
+  os << "Source Airport: " << r.get_RouteSource() << std::endl;
+  os << "Destination Airport: " << r.get_RouteDest() << std::endl;
+  os << "Number of Stops: " << r.get_RouteNumStop() << std::endl;
+  return os;
 }

@@ -11,6 +11,13 @@ class Route {
         Route();
         Route(string airline, int airline_id, string source_airport, string destination_airport, int num_stops);
         void getroutes(const std::string & filename);
+        std::string get_RouteAirline();
+        std::string get_RouteSource();
+        std::string get_RouteDest();
+        int get_RouteAirlineID();
+        int get_RouteNumStop();
+        std::vector<Route> get_routes();
+        friend std::ostream& operator<<(std::ostream& os, Route r);
     private:
         string airline;
         int airline_id;
