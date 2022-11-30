@@ -6,7 +6,7 @@
 #include <queue>
 
 using namespace std;
-
+Algorithms::Algorithms(){}
 // Returns the order of airports 
 vector<int> Algorithms::BFS(int source) {
   Airport a;

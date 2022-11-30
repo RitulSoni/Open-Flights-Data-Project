@@ -6,5 +6,6 @@
 class Algorithms {
 
   public: 
+  Algorithms();
   std::vector<int> BFS(int);
 };

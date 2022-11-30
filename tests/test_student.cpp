@@ -12,6 +12,8 @@ using std::cout;
 using std::endl;
 using std::string;
 
+using namespace std;
+
 
 TEST_CASE("PUT YOUR TESTS HERE!!!", "[tag1][tag2]") {
     // Feel free to use this to put your own test cases.
@@ -49,8 +51,11 @@ TEST_CASE("Test Adjancency List", "[GRAPH]") {
 }
 
 TEST_CASE("Test BFS", "[BFS]") {
-int airports = 0;
-std::vector<int> a = BFS(1);
-airports = a.size();
-REQUIRE(airports == 14110);
+Algorithms anth;
+std::vector<int> a = anth.BFS(1);
+
+int num_airports = a.size();
+//cout << airports << endl;
+//REQUIRE(airports == 14110);
+REQUIRE(num_airports == 1);
 }
