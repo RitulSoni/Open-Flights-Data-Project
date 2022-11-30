@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Algorithms/Algorithms.cpp.o.d"
   "CMakeFiles/src.dir/Objects/Airport.cpp.o"
   "CMakeFiles/src.dir/Objects/Airport.cpp.o.d"
+  "CMakeFiles/src.dir/Objects/Algorithms.cpp.o"
+  "CMakeFiles/src.dir/Objects/Algorithms.cpp.o.d"
   "CMakeFiles/src.dir/Objects/Graph.cpp.o"
   "CMakeFiles/src.dir/Objects/Graph.cpp.o.d"
   "CMakeFiles/src.dir/Objects/Routes.cpp.o"

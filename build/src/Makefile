@@ -179,6 +179,30 @@ Objects/Airport.cpp.s:
 	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Objects/Airport.cpp.s
 .PHONY : Objects/Airport.cpp.s
 
+Objects/Algorithms.o: Objects/Algorithms.cpp.o
+.PHONY : Objects/Algorithms.o
+
+# target to build an object file
+Objects/Algorithms.cpp.o:
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Objects/Algorithms.cpp.o
+.PHONY : Objects/Algorithms.cpp.o
+
+Objects/Algorithms.i: Objects/Algorithms.cpp.i
+.PHONY : Objects/Algorithms.i
+
+# target to preprocess a source file
+Objects/Algorithms.cpp.i:
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Objects/Algorithms.cpp.i
+.PHONY : Objects/Algorithms.cpp.i
+
+Objects/Algorithms.s: Objects/Algorithms.cpp.s
+.PHONY : Objects/Algorithms.s
+
+# target to generate assembly for a file
+Objects/Algorithms.cpp.s:
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Objects/Algorithms.cpp.s
+.PHONY : Objects/Algorithms.cpp.s
+
 Objects/Graph.o: Objects/Graph.cpp.o
 .PHONY : Objects/Graph.o
 
@@ -314,6 +338,9 @@ help:
 	@echo "... Objects/Airport.o"
 	@echo "... Objects/Airport.i"
 	@echo "... Objects/Airport.s"
+	@echo "... Objects/Algorithms.o"
+	@echo "... Objects/Algorithms.i"
+	@echo "... Objects/Algorithms.s"
 	@echo "... Objects/Graph.o"
 	@echo "... Objects/Graph.i"
 	@echo "... Objects/Graph.s"

@@ -1,5 +1,6 @@
 #pragma once
-
+#include "Routes.h"
+#include "Airport.h"
 #include <list>
 #include <vector>
 #include <unordered_map>
@@ -19,11 +20,29 @@ public:
     void createGraph();
     unordered_map<int, vector<int>> getGraph();
 
+    void EdgeWeights();
+    double calculateDistance(double latFrom, double longFrom, double latTo, double longTo);
+
+
+
+    //Airport
+     Airport a;
+    int num_airports = a.get_airports().size();
+    std::vector<Airport>  airport_arr = a.get_airports();
+
+    //Route
+    Route r;
+    vector<int> starting = r.getSourceVect();
+    vector<int> ending = r.getDestVect();
+
 
 private:
 
     //Adjenaccy list representation of a graph 
     unordered_map<int, vector<int>> adjacencyList;
+
+    //vector of Lat, Long of each route
+    vector<pair<double,double>> coordinates;
 };
 
 

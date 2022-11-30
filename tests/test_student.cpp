@@ -5,6 +5,8 @@
 #include "Objects/Airport.h"
 #include "Objects/Routes.h"
 #include "Objects/Algorithms.h"
+#include "Objects/Graph.h"
+
 
 using std::cout;
 using std::endl;

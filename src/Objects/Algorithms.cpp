@@ -2,11 +2,16 @@
 #include "Airport.h"
 #include "Graph.h"
 
+#include <vector>
+#include <queue>
+
+using namespace std;
+
 // Returns the order of airports 
-std::vector<int> Algorithms::BFS(int source) {
+vector<int> Algorithms::BFS(int source) {
   Airport a;
-  std::vector<int> output;
-  std::vector<bool> visited(17000, false);
+  vector<int> output;
+  vector<bool> visited(14110, false);
   Graph g;
   auto adj_list = g.getGraph();
   std::queue<int> queue;
