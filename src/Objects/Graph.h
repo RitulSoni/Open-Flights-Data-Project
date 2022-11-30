@@ -10,41 +10,47 @@
 #include <fstream>
 #include <iostream>
 
+
+using namespace std;
 class Graph
 {
 public:
   
-    Graph(bool weighted);
-    //Graph(bool weighted, bool directed);
-    //Graph(bool weighted, int numVertices);
+    // Graph(bool weighted);
+    // //Graph(bool weighted, bool directed);
+    // //Graph(bool weighted, int numVertices);
 
 
-    vector<Vertex> getAdjacent(Vertex source) const;
+    // vector<Vertex> getAdjacent(Vertex source) const;
     
-    Vertex getStartingVertex() const;
+    // Vertex getStartingVertex() const;
 
-    bool vertexExists (Vertex v) const;
-    void insertVertex(Vertex v);
-    Vertex removeVertex(Vertex v);
+    // bool vertexExists (Vertex v) const;
+    // void insertVertex(Vertex v);
+    // Vertex removeVertex(Vertex v);
 
 
-    //EDGE FUNCTIONS
-    bool insertEdge(Vertex start, Vertex dest);
-    Edge removeEdge(Vertex start, Vertex dest);
+    // //EDGE FUNCTIONS
+    // bool insertEdge(Vertex start, Vertex dest);
+    // Edge removeEdge(Vertex start, Vertex dest);
 
-    Edge setEdgeWeight(Vertex start, Vertex dest, unsigned weight);
+    // Edge setEdgeWeight(Vertex start, Vertex dest, unsigned weight);
 
-    bool edgeExists(Vertex source, Vertex destination) const;
+    // bool edgeExists(Vertex source, Vertex destination) const;
 
-    Edge setEdgeLabel(Vertex source, Vertex destination, string label);
-    string getEdgeLabel(Vertex source, Vertex destination) const;
+    // Edge setEdgeLabel(Vertex source, Vertex destination, string label);
+    // string getEdgeLabel(Vertex source, Vertex destination) const;
 
-    unsigned getEdgeWeight(Vertex start, Vertex dest) const;
-    Edge getEdge(Vertex source, Vertex destination) const;
+    // unsigned getEdgeWeight(Vertex start, Vertex dest) const;
+    // Edge getEdge(Vertex source, Vertex destination) const;
+
+
+
+
+    void createGraph();
 
 private:
 
     //Adjenaccy list representation of a graph 
-    mutable unordered_map<Vertex, unordered_map<Vertex, Edge>> adj_list;
-
+    unordered_map<int, vector<int>> adjacencyList;
 };
