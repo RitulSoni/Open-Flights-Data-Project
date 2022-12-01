@@ -8,15 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/tests/test_student.cpp" "CMakeFiles/test.dir/tests/test_student.cpp.o" "gcc" "CMakeFiles/test.dir/tests/test_student.cpp.o.d"
+  "/workspaces/CS225/release-f22/CS225-Final-Project/tests/test_student.cpp" "CMakeFiles/test.dir/tests/test_student.cpp.o" "gcc" "CMakeFiles/test.dir/tests/test_student.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/src/CMakeFiles/src.dir/DependInfo.cmake"
-  "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib/CMakeFiles/cs225.dir/DependInfo.cmake"
-  "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib/CMakeFiles/lodepng.dir/DependInfo.cmake"
-  "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib/CMakeFiles/util.dir/DependInfo.cmake"
+  "/workspaces/CS225/release-f22/CS225-Final-Project/build/src/CMakeFiles/src.dir/DependInfo.cmake"
+  "/workspaces/CS225/release-f22/CS225-Final-Project/build/lib/CMakeFiles/cs225.dir/DependInfo.cmake"
+  "/workspaces/CS225/release-f22/CS225-Final-Project/build/lib/CMakeFiles/lodepng.dir/DependInfo.cmake"
+  "/workspaces/CS225/release-f22/CS225-Final-Project/build/lib/CMakeFiles/util.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

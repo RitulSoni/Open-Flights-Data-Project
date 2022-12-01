@@ -1,5 +1,5 @@
 lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/LUVAPixel.cpp \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/LUVAPixel.cpp \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/c++config.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
@@ -173,7 +173,7 @@ lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/ostream.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/istream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/istream.tcc \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/LUVAPixel.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/LUVAPixel.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/sstream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/sstream.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/cmath \

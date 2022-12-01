@@ -1,5 +1,5 @@
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/PNG.cpp \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/PNG.cpp \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/c++config.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
@@ -219,10 +219,10 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/debug/safe_local_iterator.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/debug/safe_local_iterator.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/pstl/execution_defs.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/lodepng/lodepng.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/lodepng/lodepng.h \
   /usr/include/string.h /usr/include/strings.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/PNG.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/LUVAPixel.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/PNG.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/LUVAPixel.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/sstream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/sstream.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/cmath \
@@ -249,6 +249,6 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/poly_hermite.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/poly_laguerre.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/riemann_zeta.tcc \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/RGB_LUV.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.h
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/RGB_LUV.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.h

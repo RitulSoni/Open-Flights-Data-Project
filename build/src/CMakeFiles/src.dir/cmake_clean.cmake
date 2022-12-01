@@ -11,10 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Objects/Routes.cpp.o.d"
   "CMakeFiles/src.dir/Objects/utils.cpp.o"
   "CMakeFiles/src.dir/Objects/utils.cpp.o.d"
-  "CMakeFiles/src.dir/Traversals/BFS.cpp.o"
-  "CMakeFiles/src.dir/Traversals/BFS.cpp.o.d"
-  "CMakeFiles/src.dir/Traversals/DFS.cpp.o"
-  "CMakeFiles/src.dir/Traversals/DFS.cpp.o.d"
   "libsrc.a"
   "libsrc.pdb"
 )

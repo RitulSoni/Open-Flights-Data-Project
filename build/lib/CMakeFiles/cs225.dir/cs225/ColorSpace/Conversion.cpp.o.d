@@ -1,7 +1,7 @@
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o: \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/typeinfo \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/exception.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/c++config.h \
@@ -16,7 +16,7 @@ lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o: \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/pstl/pstl_config.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/hash_bytes.h \
-  /workspaces/ritulsoni/Developer/CS225\ Final\ Project/CS225-Final-Project/lib/cs225/ColorSpace/Utils.h \
+  /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Utils.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/cmath \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/cpp_type_traits.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/ext/type_traits.h \
