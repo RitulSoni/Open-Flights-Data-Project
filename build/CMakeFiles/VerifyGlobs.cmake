@@ -50,10 +50,8 @@ endif()
 # src_sources at src/CMakeLists.txt:5 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/workspaces/CS225/release-f22/CS225-Final-Project/src/*.cpp")
 set(OLD_GLOB
-  "/workspaces/CS225/release-f22/CS225-Final-Project/src/Algorithms/Algorithms.cpp"
   "/workspaces/CS225/release-f22/CS225-Final-Project/src/Objects/Airport.cpp"
   "/workspaces/CS225/release-f22/CS225-Final-Project/src/Objects/Algorithms.cpp"
-  "/workspaces/CS225/release-f22/CS225-Final-Project/src/Objects/Graph.cpp"
   "/workspaces/CS225/release-f22/CS225-Final-Project/src/Objects/Routes.cpp"
   "/workspaces/CS225/release-f22/CS225-Final-Project/src/Objects/utils.cpp"
   )
