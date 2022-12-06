@@ -264,8 +264,26 @@ CMakeFiles/main.dir/entry/main.cpp.o: ../entry/main.cpp \
   /usr/include/c++/11/tr1/modified_bessel_func.tcc \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11/tr1/riemann_zeta.tcc
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/debug/deque \
+  /usr/include/c++/11/bits/stl_queue.h
 
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/debug/deque:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/deque:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 

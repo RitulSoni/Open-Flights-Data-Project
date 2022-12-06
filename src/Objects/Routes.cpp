@@ -23,33 +23,37 @@ void Route::getroutes(const std::string & filename) {
   if (file.is_open()) {
     string line = "";
     while (getline(file, line)) {
-      std::string airline, source_airport, destination_airport;
-      int airline_id, num_stops;
-      string temp = "";
-      stringstream inputString(line);
+      try {
+        std::string airline, source_airport, destination_airport;
+        int airline_id, num_stops;
+        string temp = "";
+        stringstream inputString(line);
 
-      getline(inputString, airline, ','); 
-      
-      getline(inputString, temp, ',');
-      airline_id = stoi(temp);
-      temp = "";
+        getline(inputString, airline, ','); 
+        
+        getline(inputString, temp, ',');
+        airline_id = stoi(temp);
+        temp = "";
 
-      getline(inputString, source_airport, ',');
-      getline(inputString, temp, ','); //gets source airport id, we dont need (possibly)
-      temp = "";
+        getline(inputString, source_airport, ',');
+        getline(inputString, temp, ','); //gets source airport id, we dont need (possibly)
+        temp = "";
 
-      getline(inputString, destination_airport, ',');
-      getline(inputString, temp, ','); //destination airport id, we dont need(possibly)
-      temp = "";
+        getline(inputString, destination_airport, ',');
+        getline(inputString, temp, ','); //destination airport id, we dont need(possibly)
+        temp = "";
 
-      getline(inputString, temp, ','); //code share value, we dont need (possibly)
-      temp = "";
+        getline(inputString, temp, ','); //code share value, we dont need (possibly)
+        temp = "";
 
-      getline(inputString, temp, ',');
-      num_stops = stoi(temp);
+        getline(inputString, temp, ',');
+        num_stops = stoi(temp);
 
-      Route rout(airline, airline_id, source_airport, destination_airport, num_stops);
-      routes.push_back(rout);
+        Route rout(airline, airline_id, source_airport, destination_airport, num_stops);
+        routes.push_back(rout);
+      } catch (...) {
+        // cout << airline << endl;
+      }
     }
   }
 }
@@ -63,18 +67,18 @@ std::string Route::get_RouteDest() {
   return destination_airport;
 }
 
-vector<int> Route::getDestVect() {
-    vector<int> destinations;
+vector<std::string> Route::getDestVect() {
+    vector<std::string> destinations;
     for (size_t i = 0; i < routes.size(); ++i) {
-      destinations.push_back(stoi(routes[i].get_RouteDest()));
+      destinations.push_back(routes[i].get_RouteDest());
     }
     return destinations;
 }
 
-vector<int> Route::getSourceVect() {
-    vector<int> source;
+vector<std::string> Route::getSourceVect() {
+    vector<std::string> source;
     for (size_t i = 0; i < routes.size(); ++i) {
-      source.push_back(stoi(routes[i].get_RouteSource()));
+      source.push_back(routes[i].get_RouteSource());
     }
     return source;
 }

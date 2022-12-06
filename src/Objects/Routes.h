@@ -14,8 +14,8 @@ class Route {
         std::string get_RouteAirline();
         std::string get_RouteSource();
         std::string get_RouteDest();
-        vector<int> getDestVect();
-        vector<int> getSourceVect();
+        vector<std::string> getDestVect();
+        vector<std::string> getSourceVect();
         int get_RouteAirlineID();
         int get_RouteNumStop();
         std::vector<Route> get_routes();

@@ -1,11 +1,16 @@
-#pragma once
-#include <iostream>
-#include <vector>
-#include <string> 
-#include <map>
-class Algorithms {
+// #pragma once
+// #include "Airport.h"
+// #include <vector>
+// #include <queue>
+// #include <iostream>
+// #include <string> 
+// #include <map>
+// class Algorithms {
 
-  public: 
-  Algorithms();
-  std::vector<int> BFS(int);
-};
+//   public: 
+//   Algorithms();
+//   std::vector<Airport> BFS(Airport);
+//   double distanceBetween(Airport, Airport);
+//   GraphPort a;
+//   private: 
+// };

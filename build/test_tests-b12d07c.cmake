@@ -1,3 +1,5 @@
-add_test( [==[Test BFS iteration[BFS]]==] /workspaces/CS225/release-f22/CS225-Final-Project/build/test [==[Test BFS iteration\[BFS\]]==]  )
-set_tests_properties( [==[Test BFS iteration[BFS]]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
-set( test_TESTS [==[Test BFS iteration[BFS]]==])
+add_test( [==[7698and 0]==] /workspaces/CS225/release-f22/CS225-Final-Project/build/test [==[7698and 0]==]  )
+set_tests_properties( [==[7698and 0]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
+add_test( [==[Missing Data Check]==] /workspaces/CS225/release-f22/CS225-Final-Project/build/test [==[Missing Data Check]==]  )
+set_tests_properties( [==[Missing Data Check]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
+set( test_TESTS [==[7698and 0]==] [==[Missing Data Check]==])

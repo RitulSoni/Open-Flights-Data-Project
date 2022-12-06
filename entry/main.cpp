@@ -4,23 +4,12 @@
 #include <iostream>
 
 int main() {
-  std::cout << "hello world" << std::endl;
-  std::pair<double, double> t;
-  t.first = 0.0;
-  t.second = 0.0;
-  
-  Airport a(0, "test", "test","test", t,"test");
+  // std::cout << "hello world" << std::endl;
 
-  a.getairports("../data/airportsub.dat");
-  
-  std::vector<Airport> vect = a.get_airports();
-
-  std::cout << vect[0] << std::endl;
- //tests for airport class
-  Route r;
-  r.getroutes("../data/routesub.dat"); //data getter / parsing
-  std::vector<Route> rout = r.get_routes();
-  std::cout << rout[1] << std::endl;
-  
+  GraphPort a("../data/airports.dat", "../data/routes.dat");
+  std::vector<Airport> airports = a.get_airports();
+  a.build_edge();
+  std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList(); 
   return 0;
 }
+
