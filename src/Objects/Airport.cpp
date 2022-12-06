@@ -5,12 +5,16 @@
 #include <sstream>
 
 using namespace std;
+
 GraphPort::GraphPort(const std::string& airportFile, const std::string& routeFile) {
   Route r;
   getairports(airportFile);
   r.getroutes(routeFile);
   departureVector = r.getSourceVect();
   destinationVector = r.getDestVect();
+  
+  this->build_edge();
+  
 }
 
 Airport::Airport(int id1, std::string name1, std::string city1, std::string country1, std::pair<double, double> coordinates1,std::string iata1) {
@@ -89,7 +93,7 @@ void GraphPort::getairports(const std::string & filename) {
   } else {
     std::cout << "file does not work" << std::endl;
   }
-  std::cout << "Airports: " << count << "/7698" << std::endl;
+  // std::cout << "Airports: " << count << "/7698" << std::endl;
 }
 
 std::vector<Airport> GraphPort::get_airports() {
@@ -182,13 +186,9 @@ bool operator<(Airport a1, Airport a2) {
 // ____________ Algorithms 
 std::vector<Airport> GraphPort::BFS(Airport air) {
   vector<Airport> output;
-  map<Airport, bool> visited;
   queue<Airport> queue;
   queue.push(air);
   Airport curr = air;
-  GraphPort a("../data/airports.dat", "../data/routes.dat");
-  a.build_edge();
-  std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList();
  
   while (!queue.empty()) {
     curr = queue.front();
@@ -204,6 +204,22 @@ std::vector<Airport> GraphPort::BFS(Airport air) {
     queue.pop();
     visited.insert({air, true});
   }
+  return output;
+}
+
+int GraphPort::num_connectedComponents() {
+  int output = 0;
+  std::vector<std::vector<Airport>> components;
+  for (size_t i = 0; i < airports.size(); i++) { 
+    if (visited[airports[i]]) continue;
+    components.push_back(BFS(airports[i]));
+    output++;
+  }
+  // int test = 0;
+  // for (size_t i = 0; i < components.size(); i++) {
+  //   test += components[i].size();
+  // }
+  // std::cout << test << std::endl;
   return output;
 }
 

@@ -49,11 +49,12 @@ class GraphPort {
     vector<std::string> departureVector;
     vector<std::string> destinationVector;
     std::vector<Airport> BFS(Airport air);
+    int num_connectedComponents();
     int count12 = 0;
     
   private: 
-    
     std::vector<Airport> airports;
     std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list;
+    map<Airport, bool> visited;
 };
 

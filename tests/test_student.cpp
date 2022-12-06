@@ -13,9 +13,8 @@ using std::string;
 
 using namespace std;
 
-GraphPort a("../data/airports.dat", "../data/routes.dat");
-std::vector<Airport> airports = a.get_airports();
-
+  static GraphPort a("../data/airports.dat", "../data/routes.dat");
+  std::vector<Airport> airports = a.get_airports();
 
 TEST_CASE("Test Airports Parsing", "[airport]") {
   Airport test = airports[0];
@@ -29,7 +28,6 @@ TEST_CASE("Test find distance", "[distance]") {
 }
 // Test for Adjacency List, Routes.dat, Airports.dat
 TEST_CASE("Missing Data Check", "[routes]") {
-  a.build_edge();
   std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList();
   int adjacents = 0;
   for (size_t i = 0; i < airports.size(); i++) {
@@ -40,12 +38,3 @@ TEST_CASE("Missing Data Check", "[routes]") {
   REQUIRE(airports.size() == 7698); 
   REQUIRE(a.departureVector.size() == a.destinationVector.size());
 }
-
-// TEST_CASE("Test BFS iteration" "[BFS]") {
-//   a.build_edge();
-//   std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList();
-//   std::cout << "BFS Airports: " << a.BFS(airports[0]).size() << std::endl;
-//   // REQUIRE(a.BFS(airports[0]).size() == airports.size()); // This will pass once routes.dat works 
-// }
-
-

@@ -6,16 +6,22 @@
 int main() {
   GraphPort a("../data/airports.dat", "../data/routes.dat");
   std::vector<Airport> airports = a.get_airports();
-  a.build_edge();
   std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList(); 
-  
-  for (size_t i = 0; i < airports.size(); i+= 100) {
-    std::cout << airports[i].get_AirportId() << std::endl;
+  int count = 0;
+  for (size_t i = 0; i < 5000; i++) {
+    if (adj_list[airports[i]].size() < 5) {
+      count++;
+    }
   }
-
+  std::cout << "num of sizes below 5: " << count << std::endl;
   return 0;
 }
 
+
+
+  // for (size_t i = 0; i < airports.size(); i+= 100) {
+  //   std::cout << airports[i].get_AirportId() << std::endl;
+  // }
 
   // for (size_t i = 0; i < 15; i++) {
   //   Airport test = airports[i]; 
