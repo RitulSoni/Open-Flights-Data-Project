@@ -23,6 +23,9 @@ Airport::Airport(int id1, std::string name1, std::string city1, std::string coun
   
 }
 Airport::Airport() { }
+Airport::Airport(int id2) {
+  id = id2;
+}
 int Airport::get_AirportId() {
   return id;
 }
@@ -70,8 +73,6 @@ void GraphPort::getairports(const std::string & filename) {
       temp = "";
       getline(inputString, temp, ',');
       a = temp;
-      // this is bascially just ignoring all of the issues - not a long term solution
-      try {
         lat = stod(temp);
         temp = "";
         getline(inputString, temp, ',');
@@ -82,20 +83,13 @@ void GraphPort::getairports(const std::string & filename) {
         iata.pop_back();
         iata.erase(0,1);
         count++;
-
         Airport air(id, name, city, country, coordinates, iata);
-        
-        //std::cout << "object made" << std::endl;
         airports.push_back(air);
-        //std::cout << "obkect push back" << std::endl;
-      } catch (...) {
-        count2++;
-      }
     }
   } else {
     std::cout << "file does not work" << std::endl;
   }
-  std::cout << count << " and " << count2 << std::endl;
+  std::cout << "Airports: " << count << "/7698" << std::endl;
 }
 
 std::vector<Airport> GraphPort::get_airports() {
@@ -130,10 +124,16 @@ void GraphPort::build_edge() {
     for (size_t i = 0; i < destinationVector.size(); i++) {
       Airport curr_dest = IataToAirport(destinationVector[i]);
       Airport curr_dep = IataToAirport(departureVector[i]);
+      if (curr_dep.get_AirportId() == -1 || curr_dest.get_AirportId() == -1) {
+        count12++;
+        continue;
+      }
       double distance = calculateDistance(curr_dest.get_AirportCoordinates().first, curr_dest.get_AirportCoordinates().second, curr_dep.get_AirportCoordinates().first, curr_dep.get_AirportCoordinates().first);
       pair<Airport,int> ins (curr_dest, distance);
       adj_list[curr_dep].push_back(ins);
     }
+
+   
 }
 
 double GraphPort::calculateDistance(double start_x, double start_y, double end_x, double end_y) {
@@ -150,7 +150,7 @@ Airport GraphPort::IataToAirport(std::string iata) {
       return airports[i];
     }
   }
-  return Airport();
+  return Airport(-1);
 }
 
 // Given two Airport codes, iterates through airports to find the corresponding location, and then calculates the distance between them
@@ -206,3 +206,28 @@ std::vector<Airport> GraphPort::BFS(Airport air) {
   }
   return output;
 }
+
+
+
+
+
+// try {
+//         lat = stod(temp);
+//         temp = "";
+//         getline(inputString, temp, ',');
+//         lon = stod(temp);
+//         auto coordinates = pair<double, double>(lat, lon);
+//         name.pop_back();
+//         name.erase(0,1);
+//         iata.pop_back();
+//         iata.erase(0,1);
+//         count++;
+
+//         Airport air(id, name, city, country, coordinates, iata);
+        
+//         //std::cout << "object made" << std::endl;
+//         airports.push_back(air);
+//         //std::cout << "obkect push back" << std::endl;
+//       } catch (...) {
+//         count2++;
+//       }

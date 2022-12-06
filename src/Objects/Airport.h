@@ -12,6 +12,7 @@
 class Airport { 
   public: 
     Airport();
+    Airport(int);
     Airport(int id1, std::string name1, std::string city1, std::string country1, std::pair<double, double> coordinates1,std::string iata1);
     int get_AirportId();
     std::string get_AirportCity();
@@ -48,8 +49,10 @@ class GraphPort {
     vector<std::string> departureVector;
     vector<std::string> destinationVector;
     std::vector<Airport> BFS(Airport air);
+    int count12 = 0;
     
   private: 
+    
     std::vector<Airport> airports;
     std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list;
 };

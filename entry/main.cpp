@@ -4,12 +4,24 @@
 #include <iostream>
 
 int main() {
-  // std::cout << "hello world" << std::endl;
-
   GraphPort a("../data/airports.dat", "../data/routes.dat");
   std::vector<Airport> airports = a.get_airports();
   a.build_edge();
   std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList(); 
+  
+  for (size_t i = 0; i < airports.size(); i+= 100) {
+    std::cout << airports[i].get_AirportId() << std::endl;
+  }
+
   return 0;
 }
 
+
+  // for (size_t i = 0; i < 15; i++) {
+  //   Airport test = airports[i]; 
+  //   std::cout << "Airport Name: " << test.get_AirportName() << " Airport Iata: " << test.get_AirportIATA() << std::endl;
+  //   for (size_t i = 0; i < adj_list[test].size(); i++) {
+  //     std::vector<std::pair<Airport, double>> adj = adj_list[test];
+  //     std::cout << " \t Adjacency " << i << ": " << adj[i].first.get_AirportIATA() << " Distance: " << adj[i].second << std::endl;
+  //   }
+  // }
