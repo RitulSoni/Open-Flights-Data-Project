@@ -4,4 +4,6 @@ add_test( [==[Test find distance]==] /workspaces/CS225/release-f22/CS225-Final-P
 set_tests_properties( [==[Test find distance]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
 add_test( [==[Missing Data Check]==] /workspaces/CS225/release-f22/CS225-Final-Project/build/test [==[Missing Data Check]==]  )
 set_tests_properties( [==[Missing Data Check]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
-set( test_TESTS [==[Test Airports Parsing]==] [==[Test find distance]==] [==[Missing Data Check]==])
+add_test( PageRank /workspaces/CS225/release-f22/CS225-Final-Project/build/test PageRank  )
+set_tests_properties( PageRank PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
+set( test_TESTS [==[Test Airports Parsing]==] [==[Test find distance]==] [==[Missing Data Check]==] PageRank)

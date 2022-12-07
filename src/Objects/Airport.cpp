@@ -133,7 +133,7 @@ void GraphPort::build_edge() {
         continue;
       }
       double distance = calculateDistance(curr_dest.get_AirportCoordinates().first, curr_dest.get_AirportCoordinates().second, curr_dep.get_AirportCoordinates().first, curr_dep.get_AirportCoordinates().first);
-      pair<Airport,int> ins (curr_dest, distance);
+      pair<Airport,double> ins (curr_dest, distance);
       adj_list[curr_dep].push_back(ins);
     }
 
@@ -189,7 +189,6 @@ std::vector<Airport> GraphPort::BFS(Airport air) {
   queue<Airport> queue;
   queue.push(air);
   Airport curr = air;
- 
   while (!queue.empty()) {
     curr = queue.front();
     if (visited[curr]) {
@@ -215,14 +214,47 @@ int GraphPort::num_connectedComponents() {
     components.push_back(BFS(airports[i]));
     output++;
   }
-  // int test = 0;
-  // for (size_t i = 0; i < components.size(); i++) {
-  //   test += components[i].size();
-  // }
-  // std::cout << test << std::endl;
   return output;
 }
 
+void GraphPort::pageRank() {
+  // intialize each Airports with the same rank
+  for (size_t i = 0; i < airports.size(); i++) {
+    rankingMap.insert({airports[i], (double) 1 / airports.size()});
+  }
+
+  //Take the old page rank for every web page and equally share it with every adjacent 
+  for (size_t i = 0; i < rankingMap.size(); i++) {
+    std::vector<std::pair<Airport, double>> adjacencies_atI = adj_list[airports[i]];
+    for (size_t j = 0; j < adjacencies_atI.size(); j++) {
+      Airport airport = adjacencies_atI[j].first;
+      double sum = rankingMap[airport];
+      double d = 0.8;
+      rankingMap[airport] += (d * (sum / adjacencies_atI.size()));
+    }
+  }
+
+}
+
+std::map<Airport, double> GraphPort::getPageRankMap() {
+  pageRank();
+  return rankingMap;
+}
+std::vector<std::pair<double, Airport>> GraphPort::AirportRanking(int n) {
+  std::vector<std::pair<double,Airport>> values;
+  std::vector<std::pair<double,Airport>> output;
+  pageRank();
+  for (size_t i = 0; i < rankingMap.size(); i++) {
+    values.push_back({rankingMap[airports[i]], airports[i]});
+  }
+  sort(values.begin(), values.end());
+  std::cout << values[values.size() - 1].first << std::endl;
+  for (int i = 0; i < n; i++) {
+    output.push_back(values.back());
+    values.pop_back();
+  }
+  return output;
+}
 
 
 

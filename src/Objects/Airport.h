@@ -50,11 +50,15 @@ class GraphPort {
     vector<std::string> destinationVector;
     std::vector<Airport> BFS(Airport air);
     int num_connectedComponents();
+    void pageRank();
+    std::vector<std::pair<double,Airport>> AirportRanking(int);
+    std::map<Airport, double> getPageRankMap();
     int count12 = 0;
     
   private: 
     std::vector<Airport> airports;
     std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list;
     map<Airport, bool> visited;
+    std::map<Airport, double> rankingMap;
 };
 
