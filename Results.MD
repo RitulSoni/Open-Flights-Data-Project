@@ -1,3 +1,13 @@
+#### Adjacency List vs. Adjacency Matrix
+
+An adjacency list is a way of representing a graph G = (V, E) as a list of the vertices V adjacent to each vertex in V. This is typically implemented as a list of linked lists. An adjacency matrix is a matrix-based representation of a graph where the entry at the ith row and jth column is 1 if there is an edge between vertex i and vertex j and 0 otherwise.
+
+One key difference between the two representations is the amount of memory they use. An adjacency matrix uses O(V^2) memory to represent a graph with V vertices, while an adjacency list uses O(V + E) memory, where E is the number of edges in the graph. This means that for graphs with a large number of vertices and a small number of edges, an adjacency list may use significantly less memory than an adjacency matrix.
+
+Another difference is the time complexity of common operations on the two representations. For example, checking whether there is an edge between two vertices in a graph with an adjacency matrix takes O(1) time, since you can simply look up the value in the matrix at the corresponding row and column. In contrast, checking for the existence of an edge in a graph with an adjacency list takes O(deg(v)) time, where deg(v) is the degree of the vertex v (i.e., the number of edges incident to v). This is because you need to traverse the linked list for vertex v to see if the other vertex is present in the list.
+
+Overall, the choice between using an adjacency list or an adjacency matrix to represent a graph depends on the specific characteristics of the graph and the operations you want to perform on it. In general, adjacency lists are more memory-efficient and are better suited for graphs with a large number of vertices and a small number of edges, while adjacency matrices are faster for checking the presence of edges and are better suited for graphs with a small number of vertices and a large number of edges.
+
 ### Algorthims & Runtimes
 ***
 
