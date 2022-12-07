@@ -7,14 +7,8 @@ int main() {
   GraphPort a("../data/airports.dat", "../data/routes.dat");
   std::vector<Airport> airports = a.get_airports();
   std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList();
-
-  std::vector<std::pair<double, Airport>> testmap = a.AirportRanking(5);
-  for (size_t i = 0; i < testmap.size(); i++) {
-    std::cout << "Rank: " << i + 1 << " Airport: " << testmap[i].second.get_AirportIATA() << std::endl;
-  }
-
-
   
+  std::cout << "Components:  " << a.num_connectedComponents() << std::endl;
   return 0;
 }
 

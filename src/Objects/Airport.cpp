@@ -12,7 +12,6 @@ GraphPort::GraphPort(const std::string& airportFile, const std::string& routeFil
   r.getroutes(routeFile);
   departureVector = r.getSourceVect();
   destinationVector = r.getDestVect();
-  
   this->build_edge();
   
 }
@@ -87,7 +86,9 @@ void GraphPort::getairports(const std::string & filename) {
         iata.pop_back();
         iata.erase(0,1);
         count++;
+        // removes airports who are not in the dataset 
         Airport air(id, name, city, country, coordinates, iata);
+        
         airports.push_back(air);
     }
   } else {
@@ -183,7 +184,7 @@ bool operator<(Airport a1, Airport a2) {
 }
 
 
-// ____________ Algorithms 
+// ____________ Algorithms ____________
 std::vector<Airport> GraphPort::BFS(Airport air) {
   vector<Airport> output;
   queue<Airport> queue;
@@ -211,10 +212,21 @@ int GraphPort::num_connectedComponents() {
   std::vector<std::vector<Airport>> components;
   for (size_t i = 0; i < airports.size(); i++) { 
     if (visited[airports[i]]) continue;
-    components.push_back(BFS(airports[i]));
+    std::vector<Airport> push = BFS(airports[i]);
+    components.push_back(push);
     output++;
   }
+
+  for (size_t i = 0; i < components.size(); i++) { 
+    if (components[i].size() > 1) componentSizes.push_back(components[i].size());
+  }
   return output;
+}
+
+void GraphPort::printComponentSizes() { 
+  for (size_t i = 0; i < componentSizes.size(); i++) {
+    if (componentSizes[i] > 1) std::cout << componentSizes[i] << std::endl;
+  }
 }
 
 void GraphPort::pageRank() {
