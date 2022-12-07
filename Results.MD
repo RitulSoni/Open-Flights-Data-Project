@@ -1,4 +1,5 @@
-#### Adjacency List vs. Adjacency Matrix
+### Adjacency List vs. Adjacency Matrix
+***
 
 An adjacency list is a way of representing a graph G = (V, E) as a list of the vertices V adjacent to each vertex in V. This is typically implemented as a list of linked lists. An adjacency matrix is a matrix-based representation of a graph where the entry at the ith row and jth column is 1 if there is an edge between vertex i and vertex j and 0 otherwise.
 
