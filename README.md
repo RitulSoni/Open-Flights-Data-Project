@@ -77,8 +77,6 @@ Our project utilizes React with JavaScript frontend, Express as a backend, and T
 
 ![image](images/ArchitectureDiagram.png)
 
-### Backend
-***
 
 #### Graph Implementation 
 
