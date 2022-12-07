@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// ________________ Graphport Constructors ___________________
 GraphPort::GraphPort(const std::string& airportFile, const std::string& routeFile) {
   Route r;
   getairports(airportFile);
@@ -13,9 +14,8 @@ GraphPort::GraphPort(const std::string& airportFile, const std::string& routeFil
   departureVector = r.getSourceVect();
   destinationVector = r.getDestVect();
   this->build_edge();
-  
 }
-
+// ________________ Airport Constructors ___________________
 Airport::Airport(int id1, std::string name1, std::string city1, std::string country1, std::pair<double, double> coordinates1,std::string iata1) {
   id = id1;
   name = name1;
@@ -29,25 +29,8 @@ Airport::Airport() { }
 Airport::Airport(int id2) {
   id = id2;
 }
-int Airport::get_AirportId() {
-  return id;
-}
-std::string Airport::get_AirportCity() {
-  return city;
-}
-std::string Airport::get_AirportCountry() {
-  return country;
-}
-std::string Airport::get_AirportName() {
-  return name;
-}
-std::string Airport::get_AirportIATA() {
-  return iata;
-}
-std::pair<double, double> Airport::get_AirportCoordinates() {
-  return coordinates;
-}
 
+// ________________ Parsing ___________________
 void GraphPort::getairports(const std::string & filename) {
   ifstream f(filename);
   int count = 0;
@@ -86,7 +69,6 @@ void GraphPort::getairports(const std::string & filename) {
         iata.pop_back();
         iata.erase(0,1);
         count++;
-        // removes airports who are not in the dataset 
         Airport air(id, name, city, country, coordinates, iata);
         
         airports.push_back(air);
@@ -94,11 +76,6 @@ void GraphPort::getairports(const std::string & filename) {
   } else {
     std::cout << "file does not work" << std::endl;
   }
-  // std::cout << "Airports: " << count << "/7698" << std::endl;
-}
-
-std::vector<Airport> GraphPort::get_airports() {
-  return airports;
 }
 
 std::ostream& operator<<(std::ostream& os, Airport a) {
@@ -113,8 +90,11 @@ std::ostream& operator<<(std::ostream& os, Airport a) {
   return os;
 }
 
-//_________________Graph Work_____________________________
+bool operator<(Airport a1, Airport a2) {
+  return a1.get_AirportId() < a2.get_AirportId();
+}
 
+//_________________ Graph Construction _____________________________
 void GraphPort::build_edge() {
     //traverse through starting airports and push back each route int
     for (size_t i = 0; i < departureVector.size(); i++) {
@@ -130,24 +110,18 @@ void GraphPort::build_edge() {
       Airport curr_dest = IataToAirport(destinationVector[i]);
       Airport curr_dep = IataToAirport(departureVector[i]);
       if (curr_dep.get_AirportId() == -1 || curr_dest.get_AirportId() == -1) {
-        count12++;
         continue;
       }
       double distance = calculateDistance(curr_dest.get_AirportCoordinates().first, curr_dest.get_AirportCoordinates().second, curr_dep.get_AirportCoordinates().first, curr_dep.get_AirportCoordinates().first);
       pair<Airport,double> ins (curr_dest, distance);
       adj_list[curr_dep].push_back(ins);
     }
-
-   
 }
 
 double GraphPort::calculateDistance(double start_x, double start_y, double end_x, double end_y) {
     return sqrt(((start_x - start_y) * (start_x - start_y)) + ((end_x - end_y) * (end_x - end_y)));
 }
 
-std::map<Airport, std::vector<std::pair<Airport, double>>> GraphPort::get_adjList() {
-  return adj_list;
-}
 
 Airport GraphPort::IataToAirport(std::string iata) {
   for (size_t i = 0; i < airports.size(); i++) {
@@ -155,13 +129,12 @@ Airport GraphPort::IataToAirport(std::string iata) {
       return airports[i];
     }
   }
+  count12++;
   return Airport(-1);
 }
 
 // Given two Airport codes, iterates through airports to find the corresponding location, and then calculates the distance between them
 double GraphPort::find_distance(std::string code1, std::string code2) {
-// There are two airport codes given
-// We need to figure out the coordinates of both of those airports 
   double start_x;
   double start_y;
   double end_x;
@@ -179,12 +152,7 @@ double GraphPort::find_distance(std::string code1, std::string code2) {
   return calculateDistance(start_x, start_y, end_x, end_y);
 }
 
-bool operator<(Airport a1, Airport a2) {
-  return a1.get_AirportId() < a2.get_AirportId();
-}
-
-
-// ____________ Algorithms ____________
+// ____________ Traversals ____________
 std::vector<Airport> GraphPort::BFS(Airport air) {
   vector<Airport> output;
   queue<Airport> queue;
@@ -218,21 +186,16 @@ int GraphPort::num_connectedComponents() {
   }
 
   for (size_t i = 0; i < components.size(); i++) { 
-    if (components[i].size() > 1) componentSizes.push_back(components[i].size());
+    componentSizes.push_back(components[i].size() * 2);
   }
+  
   return output;
 }
-
-void GraphPort::printComponentSizes() { 
-  for (size_t i = 0; i < componentSizes.size(); i++) {
-    if (componentSizes[i] > 1) std::cout << componentSizes[i] << std::endl;
-  }
-}
-
+// ________________ PageRank Algorithm ___________________
 void GraphPort::pageRank() {
   // intialize each Airports with the same rank
   for (size_t i = 0; i < airports.size(); i++) {
-    rankingMap.insert({airports[i], (double) 1 / airports.size()});
+    rankingMap.insert({airports[i], 1.0 / airports.size()});
   }
 
   //Take the old page rank for every web page and equally share it with every adjacent 
@@ -248,10 +211,6 @@ void GraphPort::pageRank() {
 
 }
 
-std::map<Airport, double> GraphPort::getPageRankMap() {
-  pageRank();
-  return rankingMap;
-}
 std::vector<std::pair<double, Airport>> GraphPort::AirportRanking(int n) {
   std::vector<std::pair<double,Airport>> values;
   std::vector<std::pair<double,Airport>> output;
@@ -268,26 +227,46 @@ std::vector<std::pair<double, Airport>> GraphPort::AirportRanking(int n) {
   return output;
 }
 
+// ________________ Airport Getter Functions ___________________
+int Airport::get_AirportId() {
+  return id;
+}
+std::string Airport::get_AirportCity() {
+  return city;
+}
+std::string Airport::get_AirportCountry() {
+  return country;
+}
+std::string Airport::get_AirportName() {
+  return name;
+}
+std::string Airport::get_AirportIATA() {
+  return iata;
+}
+std::pair<double, double> Airport::get_AirportCoordinates() {
+  return coordinates;
+} 
+// ________________ Graphport Getters ___________________
+std::vector<Airport> GraphPort::get_airports() {
+  return airports;
+}
 
+std::map<Airport, std::vector<std::pair<Airport, double>>> GraphPort::get_adjList() {
+  return adj_list;
+}
 
+std::map<Airport, double> GraphPort::getPageRankMap() {
+  pageRank();
+  return rankingMap;
+}
+// ________________ PrintStatements___________________
+void GraphPort::printComponentSizes(int n) { 
 
-// try {
-//         lat = stod(temp);
-//         temp = "";
-//         getline(inputString, temp, ',');
-//         lon = stod(temp);
-//         auto coordinates = pair<double, double>(lat, lon);
-//         name.pop_back();
-//         name.erase(0,1);
-//         iata.pop_back();
-//         iata.erase(0,1);
-//         count++;
-
-//         Airport air(id, name, city, country, coordinates, iata);
-        
-//         //std::cout << "object made" << std::endl;
-//         airports.push_back(air);
-//         //std::cout << "obkect push back" << std::endl;
-//       } catch (...) {
-//         count2++;
-//       }
+  sort(componentSizes.begin(), componentSizes.end());
+  int j = 0;
+  for (int i = componentSizes.size() - 1; j < n; i--) {
+    std::cout << componentSizes[i] << std::endl;
+    j++;
+  }
+}
+// ___________________________________________

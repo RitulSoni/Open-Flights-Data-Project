@@ -53,7 +53,7 @@ class GraphPort {
     void pageRank();
     std::vector<std::pair<double,Airport>> AirportRanking(int);
     std::map<Airport, double> getPageRankMap();
-    void printComponentSizes();
+    void printComponentSizes(int);
 
 
     int count12 = 0;
