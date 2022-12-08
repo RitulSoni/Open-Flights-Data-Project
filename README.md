@@ -95,11 +95,11 @@ Once the adjacency list has been constructed, it can be used to answer various q
 
 ## Group Members and Their Roles
 
-[Kazmain Shah](https://github.com/kazshah23) worked with creating the weighted adjacency list of a graph, and creating the algorthims neccessary to reach our output. Implemented Breadth First Search, Depth First Search and Page Rank Algorithms. Also created Test Cases for each data structure and function.
+[Kazmain Shah](https://github.com/kazshah23) worked with creating the weighted adjacency list of a graph, and creating the algorthims neccessary to reach our output. Implemented Breadth First Search, Depth First Search and Page Rank Algorithms. Also created Test Cases for each data structure and function, and created the project description in main.cpp.
 
 [Ritul K. Soni](https://github.com/RitulSoni) worked with cmake compatability. 
 
-[Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create teh graph. 
+[Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create the graph. Created the algorithm Dijkstra's.
 
 
 ## Acknowledgements
