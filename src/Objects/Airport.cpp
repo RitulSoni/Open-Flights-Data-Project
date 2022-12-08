@@ -122,7 +122,7 @@ double GraphPort::calculateDistance(double start_x, double start_y, double end_x
     return sqrt(((start_x - start_y) * (start_x - start_y)) + ((end_x - end_y) * (end_x - end_y)));
 }
 
-
+// ____________ Helper Functions ____________
 Airport GraphPort::IataToAirport(std::string iata) {
   for (size_t i = 0; i < airports.size(); i++) {
     if (airports[i].get_AirportIATA() == iata) {
@@ -133,7 +133,6 @@ Airport GraphPort::IataToAirport(std::string iata) {
   return Airport(-1);
 }
 
-// Given two Airport codes, iterates through airports to find the corresponding location, and then calculates the distance between them
 double GraphPort::find_distance(std::string code1, std::string code2) {
   double start_x;
   double start_y;
@@ -176,17 +175,17 @@ std::vector<Airport> GraphPort::BFS(Airport air) {
 }
 
 int GraphPort::num_connectedComponents() {
-  int output = 0;
   std::vector<std::vector<Airport>> components;
+  int output = 0;
   for (size_t i = 0; i < airports.size(); i++) { 
     if (visited[airports[i]]) continue;
     std::vector<Airport> push = BFS(airports[i]);
     components.push_back(push);
-    output++;
   }
 
   for (size_t i = 0; i < components.size(); i++) { 
     componentSizes.push_back(components[i].size() * 2);
+    if (components[i].size() > 2) output++;
   }
   
   return output;
@@ -209,22 +208,6 @@ void GraphPort::pageRank() {
     }
   }
 
-}
-
-std::vector<std::pair<double, Airport>> GraphPort::AirportRanking(int n) {
-  std::vector<std::pair<double,Airport>> values;
-  std::vector<std::pair<double,Airport>> output;
-  pageRank();
-  for (size_t i = 0; i < rankingMap.size(); i++) {
-    values.push_back({rankingMap[airports[i]], airports[i]});
-  }
-  sort(values.begin(), values.end());
-  std::cout << values[values.size() - 1].first << std::endl;
-  for (int i = 0; i < n; i++) {
-    output.push_back(values.back());
-    values.pop_back();
-  }
-  return output;
 }
 
 // ________________ Airport Getter Functions ___________________
@@ -259,14 +242,34 @@ std::map<Airport, double> GraphPort::getPageRankMap() {
   pageRank();
   return rankingMap;
 }
+std::vector<std::pair<double,Airport>> GraphPort::getAirportRanking() {
+  return AirportRanking;
+}
 // ________________ PrintStatements___________________
 void GraphPort::printComponentSizes(int n) { 
 
   sort(componentSizes.begin(), componentSizes.end());
   int j = 0;
+  cout << "\t Size of largest three components: ";
   for (int i = componentSizes.size() - 1; j < n; i--) {
-    std::cout << componentSizes[i] << std::endl;
+    cout << componentSizes[i];
+    if (j != (n-1)) cout << ", ";
     j++;
   }
 }
+
+void GraphPort::printAirportRanking(int n, bool flag) {
+  std::vector<std::pair<double,Airport>> values;
+  pageRank();
+  for (size_t i = 0; i < rankingMap.size(); i++) {
+    values.push_back({rankingMap[airports[i]], airports[i]});
+  }
+  sort(values.begin(), values.end());
+  for (int i = 0; i < n; i++) {
+    AirportRanking.push_back(values.back());
+    if (flag) std::cout << "\t Rank: " << i << " Airport: " << values.back().second.get_AirportIATA() << endl;
+    values.pop_back();
+  }
+}
+
 // ___________________________________________

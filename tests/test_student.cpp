@@ -45,10 +45,9 @@ TEST_CASE("Missing Data Check", "[routes]") {
 // }
 
 TEST_CASE("PageRank", "[pr]") {
-  std::vector<std::pair<double, Airport>> testmap = a.AirportRanking(5);
-  // for (size_t i = 0; i < testmap.size(); i++) {
-  //   std::cout << "Rank: " << i + 1 << " Airport: " << testmap[i].second.get_AirportIATA() << std::endl;
-  // }
+  a.printAirportRanking(5, true);
+  std::vector<std::pair<double, Airport>> testmap = a.getAirportRanking();
+  
   REQUIRE(testmap[0].second.get_AirportIATA() == "ATL");
   REQUIRE(testmap[1].second.get_AirportIATA() == "DME");
   REQUIRE(testmap[2].second.get_AirportIATA() == "DFW");

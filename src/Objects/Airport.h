@@ -51,9 +51,11 @@ class GraphPort {
     std::vector<Airport> BFS(Airport air);
     int num_connectedComponents();
     void pageRank();
-    std::vector<std::pair<double,Airport>> AirportRanking(int);
+    void printAirportRanking(int, bool);
     std::map<Airport, double> getPageRankMap();
     void printComponentSizes(int);
+    void printRankings(int);
+    std::vector<std::pair<double,Airport>> getAirportRanking();
 
 
     int count12 = 0;
@@ -65,5 +67,6 @@ class GraphPort {
     std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list;
     map<Airport, bool> visited;
     std::map<Airport, double> rankingMap;
+    std::vector<std::pair<double,Airport>> AirportRanking;
 };
 
