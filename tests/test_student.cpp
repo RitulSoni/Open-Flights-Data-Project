@@ -54,3 +54,12 @@ TEST_CASE("PageRank", "[pr]") {
   REQUIRE(testmap[3].second.get_AirportIATA() == "DEN");
   REQUIRE(testmap[4].second.get_AirportIATA() == "ORD");
 }
+
+TEST_CASE("Dijkstras", "[dijk]") {
+  Airport test = airports[176];
+  std::cout << test.get_AirportIATA() << std::endl;
+  Airport destination = airports[3630];
+  std::cout << destination.get_AirportIATA() << std::endl;
+  string distance = a.dijkstras(test, destination); 
+  REQUIRE(distance == "hello");
+}

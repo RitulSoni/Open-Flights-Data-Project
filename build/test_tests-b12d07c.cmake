@@ -6,4 +6,6 @@ add_test( [==[Missing Data Check]==] /workspaces/CS225/release-f22/CS225-Final-P
 set_tests_properties( [==[Missing Data Check]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
 add_test( PageRank /workspaces/CS225/release-f22/CS225-Final-Project/build/test PageRank  )
 set_tests_properties( PageRank PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
-set( test_TESTS [==[Test Airports Parsing]==] [==[Test find distance]==] [==[Missing Data Check]==] PageRank)
+add_test( Dijkstras /workspaces/CS225/release-f22/CS225-Final-Project/build/test Dijkstras  )
+set_tests_properties( Dijkstras PROPERTIES WORKING_DIRECTORY /workspaces/CS225/release-f22/CS225-Final-Project/build)
+set( test_TESTS [==[Test Airports Parsing]==] [==[Test find distance]==] [==[Missing Data Check]==] PageRank Dijkstras)

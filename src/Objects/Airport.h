@@ -56,8 +56,10 @@ class GraphPort {
     void printComponentSizes(int);
     void printRankings(int);
     std::vector<std::pair<double,Airport>> getAirportRanking();
-
-
+    //vector<std::pair<Airport, double>> dijkstras(Airport a, Airport b);
+    string dijkstras(Airport a, Airport b);
+    string dikstrapath(vector<std::pair<Airport, double>> vect);
+    string pqtovectstring(priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq);
     int count12 = 0;
 
     std::vector<int> componentSizes;

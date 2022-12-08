@@ -273,3 +273,64 @@ void GraphPort::printAirportRanking(int n, bool flag) {
 }
 
 // ___________________________________________
+
+
+//Dijkstra implementation to find shortest path
+//std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list
+string GraphPort::dijkstras(Airport a, Airport b) {
+  const double INF = 1e9;
+  //GraphPort g;
+  map<Airport, double> distance;
+  std::vector<std::pair<Airport, double>> adjlist = adj_list[a]; //gets the adjancey list for airport A (source)
+  priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq; //priority queue of unvisited nodes
+  int size = adjlist.size();
+  //distance.resize(size, INF);
+  
+  for (auto& [port, neighbors] : adjlist) {
+    distance[port] = INF;
+  }
+  //vector<Airports> toreturn;
+  distance[a] = 0;
+  pq.push({a, 0});
+  while (!pq.empty()) {
+    Airport curr = pq.top().first;
+    double curr_dist = pq.top().second;
+    pq.pop();
+
+    if (curr.get_AirportIATA() == b.get_AirportIATA()) {
+      //return vector<std::pair<Airport, double>>(pq.begin(), pq.end());
+      //string toreturn = pqtovectstring(pq);
+      //return toreturn;
+      break;
+    }
+
+    for (const auto& [air, dist] : adjlist) { //for all Airport Distance in a's adjancey list
+      if (distance[curr] + dist < distance[air]) {
+        distance[air] = distance[curr] + dist;
+        pq.push({air, distance[air]});
+      }
+    }
+  }
+  //string toreturn = pqtovectstring(pq);
+  string toreturn = pqtovectstring(pq);
+  return toreturn;
+  //return "-1";
+}
+
+string GraphPort::dikstrapath(vector<std::pair<Airport, double>> vect) {
+  string toreturn = "";
+  for (auto& [air, dist] : vect) {
+    toreturn = toreturn + air.get_AirportIATA() + " ";
+  }
+  return toreturn; 
+}
+
+string GraphPort::pqtovectstring(priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq) {
+  vector<std::pair<Airport, double>> vect;
+  while (!pq.empty()) {
+    vect.push_back(pq.top());
+    pq.pop();
+  }
+  string toreturn = dikstrapath(vect);
+  return toreturn;
+}
