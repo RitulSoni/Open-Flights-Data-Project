@@ -20,8 +20,6 @@
     <li>
       <a href="#technical-architecture">Technical Architecture</a>
       <ul>
-        <li><a href="#components">Components</a></li>
-        <li><a href="#diagram">Diagram</a></li>
       </ul>
     </li>
     <li><a href="#installation-and-usage">Installation and Usage</a></li>
@@ -60,7 +58,7 @@ Our project uses the OpenFlights data set, where we get access to thousands of a
    ```sh
     make test && ./test
    ```
-6. To see the output run make main && ./main  
+6. To see the output and breakdown of the code run make main && ./main  
     ```sh
    make main && ./main
     ```    
@@ -68,7 +66,6 @@ Our project uses the OpenFlights data set, where we get access to thousands of a
 
 ## Technical Architecture
 
-[![React][React.js]][React-url] [![JavaScript][JavaScript]][JavaScript-url] [![TensorFlowJs][TensorFlowJS]][TensorFlowJS-url]
 
 
 #### Graph Implementation 
@@ -79,11 +76,6 @@ To create the adjacency list, we would first need to parse the dataset and extra
 
 Once the adjacency list has been constructed, it can be used to answer various questions about the airports and routes in the dataset. For example, we could use the adjacency list to find the shortest path between two airports, or to compute the connected components of the graph to see which airports are reachable from each other. The adjacency list would also allow us to efficiently store and access the data from the OpenFlights dataset.
 
-
-### Diagram
-
-
-![image](images/ArchitectureDiagram.png)
 
 
 ### Project Organization
@@ -99,7 +91,7 @@ Once the adjacency list has been constructed, it can be used to answer various q
 
 [Ritul K. Soni](https://github.com/RitulSoni) worked with cmake compatability. 
 
-[Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create the graph. Created the algorithm Dijkstra's.
+[Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create the graph. Created the Dijkstras algorithm to find the smallest route between two airports
 
 
 ## Acknowledgements
@@ -112,12 +104,7 @@ Thank you to the OpenFlights open source data set and our mentor Mona!
 [contributors-url]: https://github.com/CS222-UIUC/course-project-group-97/graphs/contributors
 [stars-shield]: https://img.shields.io/github/stars/CS222-UIUC/course-project-group-97.svg?style=for-the-badge
 [stars-url]: https://github.com/CS222-UIUC/course-project-group-97/stargazers
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[JavaScript]:https://img.shields.io/badge/JavaScript-JS-yellowgreen
-[JavaScript-url]: https://www.javascript.com
-[TensorFlowJs]: https://img.shields.io/badge/TensorFlow-TensorFlow.js-blue
-[TensorFlowJs-url]: https://www.tensorflow.org
+
 
 
 

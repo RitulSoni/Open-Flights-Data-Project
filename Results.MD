@@ -1,3 +1,12 @@
+### Our Output
+***
+
+![image](images/part1.jpeg)
+![image](images/part2.jpeg)
+
+
+
+
 ### Adjacency List vs. Adjacency Matrix
 ***
 

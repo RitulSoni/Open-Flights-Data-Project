@@ -151,8 +151,9 @@ double GraphPort::find_distance(std::string code1, std::string code2) {
   return calculateDistance(start_x, start_y, end_x, end_y);
 }
 
-// ____________ Traversals ____________
-std::vector<Airport> GraphPort::BFS(Airport air) {
+// ____________ BFS Traversals ____________
+std::vector<Airport> GraphPort::BFS(Airport air, bool flag) {
+  if (flag) visited = map<Airport, bool>();
   vector<Airport> output;
   queue<Airport> queue;
   queue.push(air);
@@ -179,15 +180,13 @@ int GraphPort::num_connectedComponents() {
   int output = 0;
   for (size_t i = 0; i < airports.size(); i++) { 
     if (visited[airports[i]]) continue;
-    std::vector<Airport> push = BFS(airports[i]);
+    std::vector<Airport> push = BFS(airports[i], false);
     components.push_back(push);
   }
-
   for (size_t i = 0; i < components.size(); i++) { 
     componentSizes.push_back(components[i].size() * 2);
     if (components[i].size() > 2) output++;
   }
-  
   return output;
 }
 // ________________ PageRank Algorithm ___________________
@@ -208,6 +207,88 @@ void GraphPort::pageRank() {
     }
   }
 
+}
+
+// ____________________Dijkstras_______________________
+std::vector<Airport> GraphPort::dijkstras(Airport a, Airport b) {
+  if (BFS(a, true).size() != BFS(b, true).size()) throw invalid_argument("Airports are not in the same connected component:");
+  std::vector<Airport> output;
+  output.push_back(a);
+  const double INF = 1e9;
+  bool print = false;
+  //GraphPort g;
+  map<Airport, double> distance;
+  std::vector<std::pair<Airport, double>> adjlistAtA = adj_list[a]; //gets the adjancey list for airport A (source)
+  if (check_adjacencies(adj_list[a], b)) {
+    std::cout << "There already Exists a direct route between these two airports" << std::endl;
+    output.push_back(b);
+    return output;
+  }
+  priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq; //priority queue of unvisited nodes
+  int size = adjlistAtA.size();
+  //distance.resize(size, INF);
+  for (auto& [port, neighbors] : adjlistAtA) {
+    distance[port] = INF;
+  }
+  //vector<Airports> toreturn;
+  distance[a] = 0;
+  bool flag = false;
+  pq.push({a, 0});
+  int testCount = 0;
+  while (!pq.empty()) {
+    testCount++;
+    Airport curr = pq.top().first;
+    double curr_dist = pq.top().second;
+    pq.pop();
+    std::vector<std::pair<Airport, double>> adjacents = adj_list[curr];
+    if (check_adjacencies(adjacents, b)) break; // If there exists a direct link from current airport to destination, break
+    if (curr.get_AirportIATA() == b.get_AirportIATA()) break;
+    // This intializes a map of Airport and bools to check if any of the adacencies in its list have a direct link to Airport b 
+    std::map<Airport, bool> if_canVisit;
+    for (size_t i = 0; i < adjacents.size(); i++) {
+      Airport first = adjacents[i].first;
+      bool second = check_adjacencies(adj_list[adjacents[i].first], b);
+      // std::cout << adjacents[i].first.get_AirportIATA() << " : " << second << + " "; 
+      if_canVisit.insert({first, second});
+    }
+
+    double min = 9999999;
+    bool found = false;
+    std::pair<Airport, double> to_insert;
+    // This is checking the map of Airport and bools to see if theres any trues 
+    for (size_t i = 0; i < adjacents.size(); i++) {
+      if (if_canVisit[adjacents[i].first] == true) {
+        if (adjacents[i].second < min) {
+          found = true; // flag to determine a true has been found
+          to_insert.first = adjacents[i].first;
+          to_insert.second = adjacents[i].second;
+          min = adjacents[i].second;
+        }
+      }
+    }
+    if (found) {
+      output.push_back(to_insert.first);
+      pq.push(to_insert);
+    }
+
+    else {
+      for (const auto& [air, dist] : adjlistAtA) { //for all Airport Distance in a's adjancey list
+        if (distance[curr] + dist < distance[air]) {
+          distance[air] = distance[curr] + dist;
+          pq.push({air, distance[air]});
+        }
+      }
+    }
+  }
+  output.push_back(b);
+  return output;
+}
+
+bool GraphPort::check_adjacencies(std::vector<std::pair<Airport, double>> adjlist, Airport b) {
+  for (size_t i = 0; i < adjlist.size(); i++) {
+      if (adjlist[i].first.get_AirportIATA() == b.get_AirportIATA()) return true;
+    }
+  return false;
 }
 
 // ________________ Airport Getter Functions ___________________
@@ -270,67 +351,4 @@ void GraphPort::printAirportRanking(int n, bool flag) {
     if (flag) std::cout << "\t Rank: " << i << " Airport: " << values.back().second.get_AirportIATA() << endl;
     values.pop_back();
   }
-}
-
-// ___________________________________________
-
-
-//Dijkstra implementation to find shortest path
-//std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list
-string GraphPort::dijkstras(Airport a, Airport b) {
-  const double INF = 1e9;
-  //GraphPort g;
-  map<Airport, double> distance;
-  std::vector<std::pair<Airport, double>> adjlist = adj_list[a]; //gets the adjancey list for airport A (source)
-  priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq; //priority queue of unvisited nodes
-  int size = adjlist.size();
-  //distance.resize(size, INF);
-  
-  for (auto& [port, neighbors] : adjlist) {
-    distance[port] = INF;
-  }
-  //vector<Airports> toreturn;
-  distance[a] = 0;
-  pq.push({a, 0});
-  while (!pq.empty()) {
-    Airport curr = pq.top().first;
-    double curr_dist = pq.top().second;
-    pq.pop();
-
-    if (curr.get_AirportIATA() == b.get_AirportIATA()) {
-      //return vector<std::pair<Airport, double>>(pq.begin(), pq.end());
-      //string toreturn = pqtovectstring(pq);
-      //return toreturn;
-      break;
-    }
-
-    for (const auto& [air, dist] : adjlist) { //for all Airport Distance in a's adjancey list
-      if (distance[curr] + dist < distance[air]) {
-        distance[air] = distance[curr] + dist;
-        pq.push({air, distance[air]});
-      }
-    }
-  }
-  //string toreturn = pqtovectstring(pq);
-  string toreturn = pqtovectstring(pq);
-  return toreturn;
-  //return "-1";
-}
-
-string GraphPort::dikstrapath(vector<std::pair<Airport, double>> vect) {
-  string toreturn = "";
-  for (auto& [air, dist] : vect) {
-    toreturn = toreturn + air.get_AirportIATA() + " ";
-  }
-  return toreturn; 
-}
-
-string GraphPort::pqtovectstring(priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq) {
-  vector<std::pair<Airport, double>> vect;
-  while (!pq.empty()) {
-    vect.push_back(pq.top());
-    pq.pop();
-  }
-  string toreturn = dikstrapath(vect);
-  return toreturn;
 }

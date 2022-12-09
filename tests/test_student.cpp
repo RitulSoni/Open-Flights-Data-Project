@@ -4,7 +4,6 @@
 
 #include "Objects/Airport.h"
 #include "Objects/Routes.h"
-#include "Objects/Algorithms.h"
 
 
 using std::cout;
@@ -15,13 +14,13 @@ using namespace std;
 
   static GraphPort a("../data/airports.dat", "../data/routes.dat");
   std::vector<Airport> airports = a.get_airports();
+  
 
 TEST_CASE("Test Airports Parsing", "[airport]") {
   Airport test = airports[0];
   REQUIRE(test.get_AirportId() == 1);
   REQUIRE(test.get_AirportCoordinates().first == -6.081689834590001);
 }
-
 
 TEST_CASE("Test find distance", "[distance]") {
   REQUIRE (a.find_distance("ORD", "JFK") < a.find_distance("ORD", "LAX"));
@@ -33,16 +32,18 @@ TEST_CASE("Missing Data Check", "[routes]") {
   for (size_t i = 0; i < airports.size(); i++) {
     adjacents += adj_list[airports[i]].size();
   }
-  std::cout << "Routes: " << adjacents << "  Airports: " << airports.size() << std::endl;
-  REQUIRE(adjacents > 66184); 
+  REQUIRE(adjacents == 66475);  // These are the routes which had codes that existed in our airports dataset 
   REQUIRE(airports.size() == 7698); 
   REQUIRE(a.departureVector.size() == a.destinationVector.size());
 }
 
-// TEST_CASE("BFS", "[bfs]") {
-//   std::vector<Airport> test = a.BFS(airports[1]);
-  
-// }
+TEST_CASE("BFS", "[bfs]") {
+  REQUIRE(a.num_connectedComponents() > 1);
+  Airport chicago = a.IataToAirport("ORD");
+  Airport losangeles = a.IataToAirport("LAX");
+  REQUIRE(a.BFS(chicago, true).size() > 3000);
+  REQUIRE(a.BFS(chicago, true).size() == a.BFS(losangeles, true).size());
+}
 
 TEST_CASE("PageRank", "[pr]") {
   a.printAirportRanking(5, true);
@@ -56,10 +57,25 @@ TEST_CASE("PageRank", "[pr]") {
 }
 
 TEST_CASE("Dijkstras", "[dijk]") {
-  Airport test = airports[176];
-  std::cout << test.get_AirportIATA() << std::endl;
-  Airport destination = airports[3630];
-  std::cout << destination.get_AirportIATA() << std::endl;
-  string distance = a.dijkstras(test, destination); 
-  REQUIRE(distance == "hello");
+  // There is a direct path from these two airports
+  Airport test1 = a.IataToAirport("ORD");
+  Airport dest1 = a.IataToAirport("JFK");
+  // There does not exist a direct path from these two airports, so path must be greater than 2
+  // In this case, there exists a intermediate path which connects both airports, so size must be three 
+  Airport test2 = a.IataToAirport("PLU");
+  Airport dest2 = a.IataToAirport("ORD");
+  // These two are not in the same connected component, so it is impossible to reach each other
+  Airport test3 = a.IataToAirport("KNQ");
+  Airport dest3 = a.IataToAirport("LAX");
+
+  std::map<Airport, std::vector<std::pair<Airport, double>>> adj_list = a.get_adjList();
+  
+  std::vector<Airport> output1 = a.dijkstras(test1, dest1); 
+  std::vector<Airport> output2 = a.dijkstras(test2, dest2);
+
+  REQUIRE(output1.size() == 2);
+  REQUIRE(output2.size() == 3);
+  REQUIRE_THROWS(a.dijkstras(test3, dest3));
+
+
 }
