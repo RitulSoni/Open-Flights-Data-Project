@@ -48,7 +48,7 @@ class GraphPort {
     Airport IataToAirport(std::string iata);
     vector<std::string> departureVector;
     vector<std::string> destinationVector;
-    std::vector<Airport> BFS(Airport air);
+    std::vector<Airport> BFS(Airport air, bool);
     int num_connectedComponents();
     void pageRank();
     void printAirportRanking(int, bool);
@@ -57,9 +57,10 @@ class GraphPort {
     void printRankings(int);
     std::vector<std::pair<double,Airport>> getAirportRanking();
     //vector<std::pair<Airport, double>> dijkstras(Airport a, Airport b);
-    string dijkstras(Airport a, Airport b);
+    std::vector<Airport> dijkstras(Airport a, Airport b);
     string dikstrapath(vector<std::pair<Airport, double>> vect);
-    string pqtovectstring(priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq);
+    string pqtovectstring(priority_queue<pair<Airport, double>, vector<pair<Airport, double>>, greater<pair<Airport, double>>> pq, Airport source, Airport dest);
+    bool check_adjacencies(std::vector<std::pair<Airport, double>> adjlist, Airport b);
     int count12 = 0;
 
     std::vector<int> componentSizes;

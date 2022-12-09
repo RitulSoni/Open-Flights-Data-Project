@@ -1,2 +1,2 @@
-/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/Objects/Airport.cpp.o CMakeFiles/src.dir/Objects/Algorithms.cpp.o CMakeFiles/src.dir/Objects/Routes.cpp.o CMakeFiles/src.dir/Objects/utils.cpp.o
+/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/Objects/Airport.cpp.o CMakeFiles/src.dir/Objects/Routes.cpp.o CMakeFiles/src.dir/Objects/utils.cpp.o
 /usr/bin/ranlib libsrc.a
