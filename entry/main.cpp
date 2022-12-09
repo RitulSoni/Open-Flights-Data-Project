@@ -75,6 +75,15 @@ int main() {
   cout << "We can now rank the top n amount of Airports with our function printAirportRanking(n)" << endl;
   a.printAirportRanking(5, true);
   cout << "\n _______________________________ Dijkstra's Implementation _______________________________" << endl;
+  cout << "We implemented Dijkstra's algorithm in order to help us find the shortest path between two Airports." << endl;
+  cout << "Our graph implementation uses an adjacency list, so we use the Airports as a key with a weight of distance"  << endl;
+  cout << "Our algorithm takes in two airports, a source airport and a destination. The algorithm uses the adjacency list of the source." << endl;
+  cout << "\n";
+  cout << "We ran into problems where paths were from two airports were too long, when there are other options like direct flights" << endl;
+  cout << "   So we had to make some of our own implementations into Dijkstras to get the actual shortest path" << endl;
+  cout << "\n";
+  cout << "Our algorithm detects when the source and destination airports are not in the same connected component" << endl;
+  cout << "   As well as if a direct flight exists, or the shortest path between both" << endl;
   cout << "\n";
   return 0;
 }
