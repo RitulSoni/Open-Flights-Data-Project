@@ -4,7 +4,6 @@
 
 #include "Objects/Airport.h"
 #include "Objects/Routes.h"
-#include "Objects/Algorithms.h"
 
 
 using std::cout;
@@ -22,7 +21,6 @@ TEST_CASE("Test Airports Parsing", "[airport]") {
   REQUIRE(test.get_AirportId() == 1);
   REQUIRE(test.get_AirportCoordinates().first == -6.081689834590001);
 }
-
 
 TEST_CASE("Test find distance", "[distance]") {
   REQUIRE (a.find_distance("ORD", "JFK") < a.find_distance("ORD", "LAX"));
