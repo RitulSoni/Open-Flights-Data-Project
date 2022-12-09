@@ -60,7 +60,7 @@ Our project uses the OpenFlights data set, where we get access to thousands of a
    ```sh
     make test && ./test
    ```
-6. To see the output run make main && ./main  
+6. To see the output and breakdown of the code run make main && ./main  
     ```sh
    make main && ./main
     ```    
