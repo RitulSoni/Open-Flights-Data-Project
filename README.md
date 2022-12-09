@@ -20,8 +20,6 @@
     <li>
       <a href="#technical-architecture">Technical Architecture</a>
       <ul>
-        <li><a href="#components">Components</a></li>
-        <li><a href="#diagram">Diagram</a></li>
       </ul>
     </li>
     <li><a href="#installation-and-usage">Installation and Usage</a></li>
