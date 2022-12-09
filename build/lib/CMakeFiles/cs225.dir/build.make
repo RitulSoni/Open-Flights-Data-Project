@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/CS225/release-f22/CS225-Final-Project
+CMAKE_SOURCE_DIR = "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/CS225/release-f22/CS225-Final-Project/build
+CMAKE_BINARY_DIR = "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build"
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/cs225.dir/depend.make
@@ -72,72 +72,72 @@ include lib/CMakeFiles/cs225.dir/flags.make
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o: lib/CMakeFiles/cs225.dir/flags.make
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o: ../lib/cs225/ColorSpace/ColorSpace.cpp
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o: lib/CMakeFiles/cs225.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o -MF CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o.d -o CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o -c /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o -MF CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o.d -o CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o -c "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.cpp"
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.i"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.cpp > CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.cpp" > CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.i
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.s"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.cpp -o CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/ColorSpace.cpp" -o CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.s
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o: lib/CMakeFiles/cs225.dir/flags.make
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o: ../lib/cs225/ColorSpace/Comparison.cpp
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o: lib/CMakeFiles/cs225.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o -MF CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o.d -o CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o -c /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Comparison.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o -MF CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o.d -o CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o -c "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/Comparison.cpp"
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.i"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Comparison.cpp > CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/Comparison.cpp" > CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.i
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.s"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Comparison.cpp -o CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/Comparison.cpp" -o CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.s
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o: lib/CMakeFiles/cs225.dir/flags.make
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o: ../lib/cs225/ColorSpace/Conversion.cpp
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o: lib/CMakeFiles/cs225.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o -MF CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o.d -o CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o -c /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o -MF CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o.d -o CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o -c "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp"
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.i"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp > CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp" > CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.i
 
 lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp -o CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/ColorSpace/Conversion.cpp" -o CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s
 
 lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: lib/CMakeFiles/cs225.dir/flags.make
 lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: ../lib/cs225/LUVAPixel.cpp
 lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: lib/CMakeFiles/cs225.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o -MF CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o.d -o CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o -c /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/LUVAPixel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o -MF CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o.d -o CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o -c "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/LUVAPixel.cpp"
 
 lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/LUVAPixel.cpp > CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/LUVAPixel.cpp" > CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i
 
 lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/LUVAPixel.cpp -o CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/LUVAPixel.cpp" -o CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s
 
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: lib/CMakeFiles/cs225.dir/flags.make
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: lib/CMakeFiles/cs225.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o -MF CMakeFiles/cs225.dir/cs225/PNG.cpp.o.d -o CMakeFiles/cs225.dir/cs225/PNG.cpp.o -c /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/PNG.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o -MF CMakeFiles/cs225.dir/cs225/PNG.cpp.o.d -o CMakeFiles/cs225.dir/cs225/PNG.cpp.o -c "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/PNG.cpp"
 
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cs225.dir/cs225/PNG.cpp.i"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/PNG.cpp > CMakeFiles/cs225.dir/cs225/PNG.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/PNG.cpp" > CMakeFiles/cs225.dir/cs225/PNG.cpp.i
 
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cs225.dir/cs225/PNG.cpp.s"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/release-f22/CS225-Final-Project/lib/cs225/PNG.cpp -o CMakeFiles/cs225.dir/cs225/PNG.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib/cs225/PNG.cpp" -o CMakeFiles/cs225.dir/cs225/PNG.cpp.s
 
 # Object files for target cs225
 cs225_OBJECTS = \
@@ -157,19 +157,19 @@ lib/libcs225.a: lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o
 lib/libcs225.a: lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o
 lib/libcs225.a: lib/CMakeFiles/cs225.dir/build.make
 lib/libcs225.a: lib/CMakeFiles/cs225.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libcs225.a"
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/cs225.dir/cmake_clean_target.cmake
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cs225.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libcs225.a"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && $(CMAKE_COMMAND) -P CMakeFiles/cs225.dir/cmake_clean_target.cmake
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cs225.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/CMakeFiles/cs225.dir/build: lib/libcs225.a
 .PHONY : lib/CMakeFiles/cs225.dir/build
 
 lib/CMakeFiles/cs225.dir/clean:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/cs225.dir/cmake_clean.cmake
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" && $(CMAKE_COMMAND) -P CMakeFiles/cs225.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/cs225.dir/clean
 
 lib/CMakeFiles/cs225.dir/depend:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/CS225/release-f22/CS225-Final-Project /workspaces/CS225/release-f22/CS225-Final-Project/lib /workspaces/CS225/release-f22/CS225-Final-Project/build /workspaces/CS225/release-f22/CS225-Final-Project/build/lib /workspaces/CS225/release-f22/CS225-Final-Project/build/lib/CMakeFiles/cs225.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project" "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/lib" "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib" "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib/CMakeFiles/cs225.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : lib/CMakeFiles/cs225.dir/depend
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/CS225/release-f22/CS225-Final-Project
+CMAKE_SOURCE_DIR = "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/CS225/release-f22/CS225-Final-Project/build
+CMAKE_BINARY_DIR = "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles /workspaces/CS225/release-f22/CS225-Final-Project/build/lib//CMakeFiles/progress.marks
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles 0
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/lib//CMakeFiles/progress.marks"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,23 +103,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(CMAKE_COMMAND) -P /workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(CMAKE_COMMAND) -P "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles/VerifyGlobs.cmake"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/CMakeFiles/lodepng.dir/rule:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/lodepng.dir/rule
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/lodepng.dir/rule
 .PHONY : lib/CMakeFiles/lodepng.dir/rule
 
 # Convenience name for target.
@@ -128,12 +128,12 @@ lodepng: lib/CMakeFiles/lodepng.dir/rule
 
 # fast build rule for target.
 lodepng/fast:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/build
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/build
 .PHONY : lodepng/fast
 
 # Convenience name for target.
 lib/CMakeFiles/util.dir/rule:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/util.dir/rule
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/util.dir/rule
 .PHONY : lib/CMakeFiles/util.dir/rule
 
 # Convenience name for target.
@@ -142,12 +142,12 @@ util: lib/CMakeFiles/util.dir/rule
 
 # fast build rule for target.
 util/fast:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/build
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/build
 .PHONY : util/fast
 
 # Convenience name for target.
 lib/CMakeFiles/cs225.dir/rule:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cs225.dir/rule
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cs225.dir/rule
 .PHONY : lib/CMakeFiles/cs225.dir/rule
 
 # Convenience name for target.
@@ -156,7 +156,7 @@ cs225: lib/CMakeFiles/cs225.dir/rule
 
 # fast build rule for target.
 cs225/fast:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/build
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/build
 .PHONY : cs225/fast
 
 cs225/ColorSpace/ColorSpace.o: cs225/ColorSpace/ColorSpace.cpp.o
@@ -164,7 +164,7 @@ cs225/ColorSpace/ColorSpace.o: cs225/ColorSpace/ColorSpace.cpp.o
 
 # target to build an object file
 cs225/ColorSpace/ColorSpace.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.o
 .PHONY : cs225/ColorSpace/ColorSpace.cpp.o
 
 cs225/ColorSpace/ColorSpace.i: cs225/ColorSpace/ColorSpace.cpp.i
@@ -172,7 +172,7 @@ cs225/ColorSpace/ColorSpace.i: cs225/ColorSpace/ColorSpace.cpp.i
 
 # target to preprocess a source file
 cs225/ColorSpace/ColorSpace.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.i
 .PHONY : cs225/ColorSpace/ColorSpace.cpp.i
 
 cs225/ColorSpace/ColorSpace.s: cs225/ColorSpace/ColorSpace.cpp.s
@@ -180,7 +180,7 @@ cs225/ColorSpace/ColorSpace.s: cs225/ColorSpace/ColorSpace.cpp.s
 
 # target to generate assembly for a file
 cs225/ColorSpace/ColorSpace.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/ColorSpace.cpp.s
 .PHONY : cs225/ColorSpace/ColorSpace.cpp.s
 
 cs225/ColorSpace/Comparison.o: cs225/ColorSpace/Comparison.cpp.o
@@ -188,7 +188,7 @@ cs225/ColorSpace/Comparison.o: cs225/ColorSpace/Comparison.cpp.o
 
 # target to build an object file
 cs225/ColorSpace/Comparison.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.o
 .PHONY : cs225/ColorSpace/Comparison.cpp.o
 
 cs225/ColorSpace/Comparison.i: cs225/ColorSpace/Comparison.cpp.i
@@ -196,7 +196,7 @@ cs225/ColorSpace/Comparison.i: cs225/ColorSpace/Comparison.cpp.i
 
 # target to preprocess a source file
 cs225/ColorSpace/Comparison.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.i
 .PHONY : cs225/ColorSpace/Comparison.cpp.i
 
 cs225/ColorSpace/Comparison.s: cs225/ColorSpace/Comparison.cpp.s
@@ -204,7 +204,7 @@ cs225/ColorSpace/Comparison.s: cs225/ColorSpace/Comparison.cpp.s
 
 # target to generate assembly for a file
 cs225/ColorSpace/Comparison.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Comparison.cpp.s
 .PHONY : cs225/ColorSpace/Comparison.cpp.s
 
 cs225/ColorSpace/Conversion.o: cs225/ColorSpace/Conversion.cpp.o
@@ -212,7 +212,7 @@ cs225/ColorSpace/Conversion.o: cs225/ColorSpace/Conversion.cpp.o
 
 # target to build an object file
 cs225/ColorSpace/Conversion.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o
 .PHONY : cs225/ColorSpace/Conversion.cpp.o
 
 cs225/ColorSpace/Conversion.i: cs225/ColorSpace/Conversion.cpp.i
@@ -220,7 +220,7 @@ cs225/ColorSpace/Conversion.i: cs225/ColorSpace/Conversion.cpp.i
 
 # target to preprocess a source file
 cs225/ColorSpace/Conversion.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.i
 .PHONY : cs225/ColorSpace/Conversion.cpp.i
 
 cs225/ColorSpace/Conversion.s: cs225/ColorSpace/Conversion.cpp.s
@@ -228,7 +228,7 @@ cs225/ColorSpace/Conversion.s: cs225/ColorSpace/Conversion.cpp.s
 
 # target to generate assembly for a file
 cs225/ColorSpace/Conversion.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s
 .PHONY : cs225/ColorSpace/Conversion.cpp.s
 
 cs225/LUVAPixel.o: cs225/LUVAPixel.cpp.o
@@ -236,7 +236,7 @@ cs225/LUVAPixel.o: cs225/LUVAPixel.cpp.o
 
 # target to build an object file
 cs225/LUVAPixel.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o
 .PHONY : cs225/LUVAPixel.cpp.o
 
 cs225/LUVAPixel.i: cs225/LUVAPixel.cpp.i
@@ -244,7 +244,7 @@ cs225/LUVAPixel.i: cs225/LUVAPixel.cpp.i
 
 # target to preprocess a source file
 cs225/LUVAPixel.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i
 .PHONY : cs225/LUVAPixel.cpp.i
 
 cs225/LUVAPixel.s: cs225/LUVAPixel.cpp.s
@@ -252,7 +252,7 @@ cs225/LUVAPixel.s: cs225/LUVAPixel.cpp.s
 
 # target to generate assembly for a file
 cs225/LUVAPixel.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s
 .PHONY : cs225/LUVAPixel.cpp.s
 
 cs225/PNG.o: cs225/PNG.cpp.o
@@ -260,7 +260,7 @@ cs225/PNG.o: cs225/PNG.cpp.o
 
 # target to build an object file
 cs225/PNG.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o
 .PHONY : cs225/PNG.cpp.o
 
 cs225/PNG.i: cs225/PNG.cpp.i
@@ -268,7 +268,7 @@ cs225/PNG.i: cs225/PNG.cpp.i
 
 # target to preprocess a source file
 cs225/PNG.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.i
 .PHONY : cs225/PNG.cpp.i
 
 cs225/PNG.s: cs225/PNG.cpp.s
@@ -276,7 +276,7 @@ cs225/PNG.s: cs225/PNG.cpp.s
 
 # target to generate assembly for a file
 cs225/PNG.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.s
 .PHONY : cs225/PNG.cpp.s
 
 lodepng/lodepng.o: lodepng/lodepng.cpp.o
@@ -284,7 +284,7 @@ lodepng/lodepng.o: lodepng/lodepng.cpp.o
 
 # target to build an object file
 lodepng/lodepng.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.o
 .PHONY : lodepng/lodepng.cpp.o
 
 lodepng/lodepng.i: lodepng/lodepng.cpp.i
@@ -292,7 +292,7 @@ lodepng/lodepng.i: lodepng/lodepng.cpp.i
 
 # target to preprocess a source file
 lodepng/lodepng.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.i
 .PHONY : lodepng/lodepng.cpp.i
 
 lodepng/lodepng.s: lodepng/lodepng.cpp.s
@@ -300,7 +300,7 @@ lodepng/lodepng.s: lodepng/lodepng.cpp.s
 
 # target to generate assembly for a file
 lodepng/lodepng.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.s
 .PHONY : lodepng/lodepng.cpp.s
 
 util/coloredout.o: util/coloredout.cpp.o
@@ -308,7 +308,7 @@ util/coloredout.o: util/coloredout.cpp.o
 
 # target to build an object file
 util/coloredout.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/coloredout.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/coloredout.cpp.o
 .PHONY : util/coloredout.cpp.o
 
 util/coloredout.i: util/coloredout.cpp.i
@@ -316,7 +316,7 @@ util/coloredout.i: util/coloredout.cpp.i
 
 # target to preprocess a source file
 util/coloredout.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/coloredout.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/coloredout.cpp.i
 .PHONY : util/coloredout.cpp.i
 
 util/coloredout.s: util/coloredout.cpp.s
@@ -324,7 +324,7 @@ util/coloredout.s: util/coloredout.cpp.s
 
 # target to generate assembly for a file
 util/coloredout.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/coloredout.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/coloredout.cpp.s
 .PHONY : util/coloredout.cpp.s
 
 util/util.o: util/util.cpp.o
@@ -332,7 +332,7 @@ util/util.o: util/util.cpp.o
 
 # target to build an object file
 util/util.cpp.o:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/util.cpp.o
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/util.cpp.o
 .PHONY : util/util.cpp.o
 
 util/util.i: util/util.cpp.i
@@ -340,7 +340,7 @@ util/util.i: util/util.cpp.i
 
 # target to preprocess a source file
 util/util.cpp.i:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/util.cpp.i
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/util.cpp.i
 .PHONY : util/util.cpp.i
 
 util/util.s: util/util.cpp.s
@@ -348,7 +348,7 @@ util/util.s: util/util.cpp.s
 
 # target to generate assembly for a file
 util/util.cpp.s:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/util.cpp.s
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/util.dir/build.make lib/CMakeFiles/util.dir/util/util.cpp.s
 .PHONY : util/util.cpp.s
 
 # Help Target
@@ -397,7 +397,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(CMAKE_COMMAND) -P /workspaces/CS225/release-f22/CS225-Final-Project/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspaces/CS225/release-f22/CS225-Final-Project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(CMAKE_COMMAND) -P "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build/CMakeFiles/VerifyGlobs.cmake"
+	cd "/workspaces/ritulsoni/Developer/CS225 Final Project/CS225-Final-Project/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
