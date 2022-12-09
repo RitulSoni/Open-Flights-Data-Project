@@ -1,8 +1,8 @@
 ### Our Output
 ***
 
-![image](images/part1.jpeg)
-![image](images/part2.jpeg)
+![image](images/Part1.jpeg)
+![image](images/Part2.jpeg)
 
 
 
