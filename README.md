@@ -99,7 +99,7 @@ Once the adjacency list has been constructed, it can be used to answer various q
 
 [Ritul K. Soni](https://github.com/RitulSoni) worked with cmake compatability. 
 
-[Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create the graph. Created the algorithm Dijkstra's.
+[Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create the graph. Created the Dijkstras algorithm to find the smallest route between two airports
 
 
 ## Acknowledgements
