@@ -61,7 +61,7 @@ int main() {
   cout << "Our BFS implementation can be tested by calling our printComponentSizes() function" << endl;
   cout << "\n";
   std::cout << "\t Number of Connected Components: " << a.num_connectedComponents() << std::endl;
-  a.printComponentSizes(3);
+  a.printComponentSizes(5);
   cout << "\n";
   cout << "\n _______________________________ Page Rank Implentation _______________________________" << endl;
   cout << "\n";
@@ -75,15 +75,33 @@ int main() {
   cout << "We can now rank the top n amount of Airports with our function printAirportRanking(n)" << endl;
   a.printAirportRanking(5, true);
   cout << "\n _______________________________ Dijkstra's Implementation _______________________________" << endl;
-  cout << "We implemented Dijkstra's algorithm in order to help us find the shortest path between two Airports." << endl;
-  cout << "Our graph implementation uses an adjacency list, so we use the Airports as a key with a weight of distance"  << endl;
-  cout << "Our algorithm takes in two airports, a source airport and a destination. The algorithm uses the adjacency list of the source." << endl;
   cout << "\n";
-  cout << "We ran into problems where paths were from two airports were too long, when there are other options like direct flights" << endl;
-  cout << "   So we had to make some of our own implementations into Dijkstras to get the actual shortest path" << endl;
+  cout << "- We implemented Dijkstra's algorithm in order to help us find the shortest path between two Airports." << endl;
+  cout << "- Our graph implementation uses an adjacency list, so we use the Airports as a key with a weight of distance"  << endl;
+  cout << "- Our algorithm takes in two airports, a source airport and a destination. The algorithm uses the adjacency list of the source." << endl;
   cout << "\n";
-  cout << "Our algorithm detects when the source and destination airports are not in the same connected component" << endl;
-  cout << "   As well as if a direct flight exists, or the shortest path between both" << endl;
+  cout << "There are three cases in the return statement of this function" << endl;
+  cout << "1. The two Airports are not in the same connected component" << endl;
+  cout << "\t - If both airports are not in the same connected component, then there does not exist a single path to get from one node to the other since they do not share any common edges." << endl;
+  cout << "\t - This is accomplished using the BFS traversal to determine the values of the connected components" << endl;
+  cout << "2. There already exists a direct edge from both Airports " << endl;
+  cout << "\t - In this case, there already is a direct path to get from airport a to airport b, therefore there is no need to run the algorithm" << endl;
+  cout << "3. There exists intermediate nodes to get from Airport A and Airport B" << endl;
+  cout << "\t - This is where our algorithm truly does all the work, it uses a priority queue to traverse through all of the adjacents and find the most efficient route" << endl;
+  cout << "\t - Since our graph is weighted, we also consider the weights which is distance, as a tiebreaker to determine which path to go" << endl;
+  cout << "\n";
+  cout << "Here is an example of a flight from PLU (Thun Field, Washington) to ORD (Chicago, Illinois) " << endl;
+  cout << "\t" << endl;
+  Airport test2 = a.IataToAirport("PLU");
+  Airport dest2 = a.IataToAirport("ORD");
+  std::vector<Airport> output2 = a.dijkstras(test2, dest2);
+  cout << "\t ";
+  for (size_t i = 0; i < output2.size(); i++) {
+    cout << " " << output2[i].get_AirportIATA();
+    if (i != output2.size() - 1) cout << " -->";
+  }
+  cout << "\n" << endl;
+  cout << "Since there is not one route that connects PLU to ORD directly, our Dijkstras implementation searches for the most efficient intermediate airports to get to its destination " << endl;
   cout << "\n";
   return 0;
 }
