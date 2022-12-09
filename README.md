@@ -78,8 +78,6 @@ Once the adjacency list has been constructed, it can be used to answer various q
 
 
 
-### Project Organization
-***
 
 
 
