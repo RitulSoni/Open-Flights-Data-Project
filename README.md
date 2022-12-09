@@ -77,11 +77,6 @@ To create the adjacency list, we would first need to parse the dataset and extra
 Once the adjacency list has been constructed, it can be used to answer various questions about the airports and routes in the dataset. For example, we could use the adjacency list to find the shortest path between two airports, or to compute the connected components of the graph to see which airports are reachable from each other. The adjacency list would also allow us to efficiently store and access the data from the OpenFlights dataset.
 
 
-### Diagram
-
-
-![image](images/ArchitectureDiagram.png)
-
 
 ### Project Organization
 ***
