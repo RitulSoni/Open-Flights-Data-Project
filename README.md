@@ -68,7 +68,6 @@ Our project uses the OpenFlights data set, where we get access to thousands of a
 
 ## Technical Architecture
 
-[![React][React.js]][React-url] [![JavaScript][JavaScript]][JavaScript-url] [![TensorFlowJs][TensorFlowJS]][TensorFlowJS-url]
 
 
 #### Graph Implementation 
@@ -112,12 +111,7 @@ Thank you to the OpenFlights open source data set and our mentor Mona!
 [contributors-url]: https://github.com/CS222-UIUC/course-project-group-97/graphs/contributors
 [stars-shield]: https://img.shields.io/github/stars/CS222-UIUC/course-project-group-97.svg?style=for-the-badge
 [stars-url]: https://github.com/CS222-UIUC/course-project-group-97/stargazers
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[JavaScript]:https://img.shields.io/badge/JavaScript-JS-yellowgreen
-[JavaScript-url]: https://www.javascript.com
-[TensorFlowJs]: https://img.shields.io/badge/TensorFlow-TensorFlow.js-blue
-[TensorFlowJs-url]: https://www.tensorflow.org
+
 
 
 
