@@ -29,7 +29,7 @@ The algorithm works by maintaining a set of distances from the source vertex to 
 #### Breadth-First Search
 Breadth-first search (BFS) is an algorithm for traversing or searching a graph data structure. It starts at a given vertex and explores all the neighboring vertices before moving to the next level neighbors. The purpose of BFS is to compute the shortest path between a starting vertex and all other vertices reachable from it.
 
-BFS can be used to solve a variety of problems in graph theory, including finding the shortest path between two vertices, computing the connected components of a graph, and generating a spanning tree of a graph. It can also be used as a subroutine in other graph algorithms, such as cycle detection and topological sorting. BFS has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+BFS can be used to solve a variety of problems in graph theory, including finding the shortest path between two vertices, computing the connected components of a graph, and generating a spanning tree of a graph. It can also be used as a subroutine in other graph algorithms, such as cycle detection and topological sorting. In our implementation we used BFS to traverse through every node in a connected component. BFS has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph.
 
 #### Page Rank
 
