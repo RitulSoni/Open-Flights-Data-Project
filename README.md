@@ -45,20 +45,23 @@ Our project uses the OpenFlights data set, where we get access to thousands of a
     ```sh
     cd CS225-Final-Project
     ```
-3. Change directory into the `build` folder:
+3. Make the `build` directory :
+    ```sh
+    mkdir build
+    ```
+4. Change directory into the `build` folder:
     ```sh
     cd build
     ```
-      
-4. In the `build` directory, "run cmake .."
+5. In the `build` directory, "run cmake .."
    ```sh
    cmake ..
    ```
-5. In the `build` directory, run make test && ./test to make sure all tests are passing
+6. In the `build` directory, run make test && ./test to make sure all tests are passing
    ```sh
     make test && ./test
    ```
-6. To see the output and breakdown of the code run make main && ./main  
+7. To see the output and breakdown of the code run make main && ./main  
     ```sh
    make main && ./main
     ```    
