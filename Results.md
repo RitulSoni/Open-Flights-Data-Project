@@ -31,14 +31,6 @@ Breadth-first search (BFS) is an algorithm for traversing or searching a graph d
 
 BFS can be used to solve a variety of problems in graph theory, including finding the shortest path between two vertices, computing the connected components of a graph, and generating a spanning tree of a graph. It can also be used as a subroutine in other graph algorithms, such as cycle detection and topological sorting. BFS has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph.
 
-#### Depth-First Search
-
-Depth-first search (DFS) is an algorithm for traversing or searching a graph data structure. It starts at a given vertex and explores as far as possible along each branch before backtracking. The purpose of DFS is to traverse the entire graph, or to visit all the vertices and edges of a graph in a particular manner.
-
-DFS can be used to solve a variety of problems in graph theory, including finding connected components in a graph, testing if a graph is bipartite, and finding the strongly connected components of a directed graph. It can also be used as a subroutine in other graph algorithms, such as topological sorting and cycle detection.
-
-DFS has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph. Additionally, DFS only visits vertices that are reachable from the starting vertex, so it may not find the shortest path between two vertices if the graph has multiple connected components.
-
 #### Page Rank
 
-In a graph, the PageRank of a vertex is calculated based on the PageRanks of the vertices that link to it. This creates a system where vertices with a high PageRank are considered more important than vertices with a low PageRank. The PageRank of a vertex can be used to measure the importance or centrality of the vertex in the graph.
+In a graph, the PageRank of a vertex is calculated based on the PageRanks of the vertices that link to it. This creates a system where vertices with a high PageRank are considered more important than vertices with a low PageRank. The PageRank of a vertex can be used to measure the importance or centrality of the vertex in the graph.  
