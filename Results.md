@@ -34,3 +34,16 @@ BFS can be used to solve a variety of problems in graph theory, including findin
 #### Page Rank
 
 In a graph, the PageRank of a vertex is calculated based on the PageRanks of the vertices that link to it. This creates a system where vertices with a high PageRank are considered more important than vertices with a low PageRank. The PageRank of a vertex can be used to measure the importance or centrality of the vertex in the graph.  
+
+### Leading Question 
+***
+
+When we proposed this project, some of our main goals for it were to use an algorithm to find the most popular (most connected in routes) airports, as well as an algorithm to figure out the most optimal path between any two airports.
+
+As mentioned above, we were successful in using the PageRank algorithm to find the most popular airports, which we verified using several online resources of the most popular airports. This algorithm was implemented well into our project and it was a great way to implement an algorithm we have not really used, and see a real life use case of it. This was similar with BFS, as it gave us another application of how to use BFS for a real data set.
+
+We had more trouble implementing Dijkstra's as we had to figure out an efficient way to use it with the way we built around the dataset. However, after figuring out the proper way to use it with our adjacency list, we were able to usae it to find the shortest path between airports.
+
+#### Conclusion
+
+Overall, we were able to answer both of our leading questions: finding the optimal path between two airports and find the most popular airports. As a team, we worked well together, but potentially in the future, we could communicate better on what parts we are working on, as well as plan out a design before creating our structure. This project was an eye-opening assignment into how to use the algorithms and structures learned in class on a real world dataset.
