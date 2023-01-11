@@ -90,7 +90,7 @@ Once the adjacency list has been constructed, it can be used to answer various q
 
 [Kazmain Shah](https://github.com/kazshah23) worked with creating the weighted adjacency list of a graph, and creating the algorthims neccessary to reach our output. Implemented Breadth First Search, Depth First Search and Page Rank Algorithms. Also created Test Cases for each data structure and function, and created the project description in main.cpp.
 
-[Ritul K. Soni](https://github.com/RitulSoni) Implemented algorithms including Page Rank, developed the Adjacency List representation of a graph for teh Open Flights Data Set, and worked with CMAKE compatability.
+[Ritul K. Soni](https://github.com/RitulSoni) Implemented algorithms including Page Rank, developed the Adjacency List representation of a graph for the Open Flights Data Set, and worked with CMAKE compatability.
 
 [Keshav Trikha](https://github.com/ktrikha2) worked with Data Cleaning and parsing with the OpenFlights dataset to seperate the data by the elements we need to create the graph. Created the Dijkstras algorithm to find the smallest route between two airports
 
